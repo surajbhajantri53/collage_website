@@ -1,0 +1,51 @@
+
+body{
+    background-color: aliceblue;
+}
+nav{
+    background-color: black;
+    color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+nav>div{
+    text-align: center;
+}
+
+nav>#menu{
+    width: 100%;
+    background-color: rgba(74, 73, 73, 0.404);
+
+}
+#menu>ul{
+    display: flex;
+    /* background: rgba(74, 73, 73, 0.404); */
+    gap: 20px;
+}
+#menu>ul>li{
+    list-style-type: none;
+    
+}
+section{
+    background-color: white;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#intro_video{
+     margin-left: 20px;
+    margin-bottom: 20px;
+    height: 300px;
+    width: 450px;
+}
+#campus_photo{
+     margin-left: 20px;
+    margin-bottom: 20px;
+    height: 300px;
+    width: 450px;
+}
+

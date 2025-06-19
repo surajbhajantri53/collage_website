@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #l1{
+        background-color: aqua;
+        
+       }
+       #l2{
+        background-color: azure;
+       }
+       .line{
+        color: #000;
+       }
+    </style>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <p style="color: aqua; background: #000;">this is inline css styling</p>
+    <h1 id="l1" class="line">this is internal css styling line 1</h1>
+    <h2 id="l2" class="line">this is internal css styling 2</h2>
+    <section id="section"> <h2>this is external css styling</h2>
+        <div id="d1">div under section</div>
+        <p>
+            this is demo of external css styling 
+        </p>
+        <p>this is second line</p>
+    </section>
+
+
+    <section id="box_section">
+        <div class="box" id="box1">
+            <div class="box" id="box2">
+                <div class="box" id="box3">
+                    <div class="box" id="box4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
