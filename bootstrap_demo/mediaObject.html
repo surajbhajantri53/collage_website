@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Media Object</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div class="container mt-4">
+        <h1 class="text-center">Bootstrap Media Objects Demo</h1>
+
+        <!-- Basic Media Object -->
+         <h2>Basic Media Object</h2>
+         <div class="media d-flex align-items-start"><img src="https://cdn.pixabay.com/photo/2023/06/23/11/23/ai-generated-8083323_640.jpg" alt="Avatar" class="mr-3 rounded-circle">
+            <div class="media-body">
+                <h5 class="mt-0">Media Object Title</h5>
+                This is a simple media object with an image on the left and text on the right.
+            </div>
+        </div>
+        <hr>
+        <!-- Media Object Aligned to Right -->
+         <h2>Media Object Aligned to Right</h2>
+            <div class="media d-flex align-items-start flex-row-reverse"><img src="https://cdn.pixabay.com/photo/2023/06/23/11/23/ai-generated-8083323_640.jpg" alt="Avatar" class="ml-3 rounded-circle">
+                <div class="media-body text-center">
+                    <h5 class="mt-0">Right Aligned Media Object</h5>
+                    This media object is aligned to the right with the image on the right side.
+                </div>
+            </div>
+            <hr>
+
+            <!-- Nested Media Objects -->
+            <h2>Nested Media Objects</h2>
+            <div class="media d-flex align-items-start">
+                <img src="https://via.placeholder.com/64" alt="Avatar" class="mr-3 rounded-circle ">
+                <div class="media-body">
+                    <h5 class="mt-0">Main media</h5>
+                    This is a parent media object with a nested media object inside.
+                    <div class="media d-flex align-items-start mt-3">
+                        <img src="https://via.placeholder.com/50" alt="Nested Avatar" class="mr-3 rounded-circle">
+                        <div class="media-body">
+                            <h6 class="mt-0">Nested Media</h6>
+                            This is a nested media object inside another media object. 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <!-- Media Object with Background & Border -->
+            <h2>Media Object with Background & Border</h2>
+            <div class="media d-flex align-items-start p-3 border bg-danger rounded">
+                <img src="https://via.placeholder.com/64" alt="Avatar" class="mr-3 rounded-circle">
+                <div class="media-body">
+                    <h5 class="mt-0">Media Object with Background</h5>
+                    This media object has a light background and a border for better visibility.
+                </div>
+            </div>
+    </div>
+
+</body>
+</html>

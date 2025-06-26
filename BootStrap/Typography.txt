@@ -1,0 +1,140 @@
+# **📌 Bootstrap Typography**  
+
+Bootstrap provides various typography classes to style text easily. Below are different text styles with examples.
+
+---
+
+## **1️⃣ Headings**
+Bootstrap provides heading styles from `<h1>` to `<h6>`, and you can use `.h1`, `.h2`, etc., for heading styles without using actual `<h1>` tags.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Typography</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+
+        <p class="h1">h1 Styled Text</p>
+        <p class="h2">h2 Styled Text</p>
+        <p class="h3">h3 Styled Text</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+---
+## **2️⃣ Display Headings**
+Use `.display-1` to `.display-6` for larger, more prominent headings.
+
+
+<p class="display-1">Display 1</p>
+<p class="display-2">Display 2</p>
+<p class="display-3">Display 3</p>
+<p class="display-4">Display 4</p>
+<p class="display-5">Display 5</p>
+<p class="display-6">Display 6</p>
+
+**Effect:** These headings are larger than standard `<h1>` to `<h6>` tags.
+
+---
+## **3️⃣ Lead Text**
+Use `.lead` to make text stand out.
+
+### **📝 Code Example**
+```html
+<p class="lead">This is a lead paragraph. It stands out from regular text.</p>
+```
+---
+## **4️⃣ Text Alignment**
+Use `.text-start`, `.text-center`, and `.text-end` to align text.
+
+### **📝 Code Example**
+```html
+<p class="text-start">Left-aligned text.</p>
+<p class="text-center">Center-aligned text.</p>
+<p class="text-end">Right-aligned text.</p>
+```
+---
+## **5️⃣ Text Transform**
+Use `.text-lowercase`, `.text-uppercase`, and `.text-capitalize` to transform text.
+
+### **📝 Code Example**
+
+<p class="text-lowercase">THIS TEXT WILL BE LOWERCASE.</p>
+<p class="text-uppercase">this text will be uppercase.</p>
+<p class="text-capitalize">this text will be capitalized.</p>
+
+---
+## **6️⃣ Font Weight & Italics**
+Use `.fw-bold`, `.fw-normal`, `.fw-light`, and `.fst-italic` for styling.
+
+### **📝 Code Example**
+
+<p class="fw-bold">Bold text</p>
+<p class="fw-normal">Normal text</p>
+<p class="fw-light">Light text</p>
+<p class="fst-italic">Italic text</p>
+
+---
+## **7️⃣ Small Text**
+Use `.small` for smaller text.
+
+### **📝 Code Example**
+
+<p>This is normal text. <span class="small">This is small text.</span></p>
+
+---
+## **8️⃣ Text Colors**
+Use Bootstrap color classes for text colors.
+
+### **📝 Code Example**
+
+<p class="text-primary">Primary text</p>
+<p class="text-secondary">Secondary text</p>
+<p class="text-success">Success text</p>
+<p class="text-danger">Danger text</p>
+<p class="text-warning">Warning text</p>
+<p class="text-info">Info text</p>
+<p class="text-dark">Dark text</p>
+<p class="text-muted">Muted text</p>
+<p class="text-white bg-dark">White text on dark background</p>
+
+---
+## **9️⃣ Blockquotes**
+Use `.blockquote` for quotations.
+
+### **📝 Code Example**
+
+<blockquote class="blockquote">
+    <p>This is a blockquote.</p>
+</blockquote>
+
+---
+## **🎯 Summary**
+| Feature | Class |
+|---------|-------------|
+| **Headings** | `.h1` - `.h6` |
+| **Display Headings** | `.display-1` - `.display-6` |
+| **Lead Text** | `.lead` |
+| **Text Alignment** | `.text-start`, `.text-center`, `.text-end` |
+| **Text Transform** | `.text-uppercase`, `.text-lowercase`, `.text-capitalize` |
+| **Font Weight** | `.fw-bold`, `.fw-normal`, `.fw-light` |
+| **Italic** | `.fst-italic` |
+| **Small Text** | `.small` |
+| **Text Colors** | `.text-primary`, `.text-success`, `.text-danger`, etc. |
+| **Blockquotes** | `.blockquote` |
+
+🔥 **Now you can style text easily with Bootstrap typography!** 🚀

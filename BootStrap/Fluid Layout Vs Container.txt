@@ -1,0 +1,68 @@
+### **Practical Usage: When to Use Fluid Layout Over Fluid Container**  
+
+#### **Scenario: Full-Screen Background Section in a Custom Webpage**  
+
+Imagine you are designing a **landing page** where you need a **full-screen hero section** with a background image or video. In this case, you should use **Fluid Layout (`width: 100%`)** instead of Bootstrap’s `.container-fluid`.
+
+---
+
+### **🔹 Why Use Fluid Layout Instead of `.container-fluid`?**  
+1. **No Bootstrap Padding/Margins** → `.container-fluid` has built-in Bootstrap spacing, which may affect design consistency.  
+2. **Full-Screen Backgrounds** → You need precise control to **cover the full screen**, which `.container-fluid` might not provide.  
+3. **Custom Styling** → You can apply `height: 100vh` and `width: 100%` without any Bootstrap restrictions.  
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluid Layout Hero Section</title>
+    <style>
+        .hero-section {
+            width: 100%; /* Takes full viewport width */
+            height: 100vh; /* Takes full viewport height */
+            background: url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-section">
+        <h1>Welcome to Our Website</h1>
+    </div>
+
+</body>
+</html>
+
+
+### **🎯 What Happens?**
+- The **hero section** covers **100% of the viewport width & height**.
+- The **background image stretches fully** without Bootstrap’s default spacing.
+- If you used `.container-fluid`, it might **not cover the full height** correctly and add unwanted margins.
+
+---
+
+### **❌ What Happens if You Use `.container-fluid` Instead?**
+
+<div class="container-fluid bg-dark text-white p-5">
+    <h1>Hero Section</h1>
+</div>
+
+- `.container-fluid` **adds Bootstrap padding/margins**.
+- It **does not fill the full screen height** automatically.
+- You **lose precise control** over the **hero section layout**.
+
+---
+
+### **🚀 Conclusion:**
+- **Use Fluid Layout (`width: 100%`)** when creating **full-screen backgrounds, hero sections, or splash pages**.  
+- **Use `.container-fluid`** for **regular full-width sections** in Bootstrap-based designs (like banners, footers, or navigation bars).  
+

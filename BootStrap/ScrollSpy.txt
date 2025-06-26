@@ -1,0 +1,92 @@
+### **📌 Bootstrap ScrollSpy**  
+
+Bootstrap **ScrollSpy** automatically updates the active state of navigation items as you scroll through different sections on a webpage.  
+
+---
+
+### **🚀 Features Covered:**  
+✔️ Basic ScrollSpy  
+✔️ ScrollSpy with Navbar  
+
+---
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap ScrollSpy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            position: relative;
+        }
+        .section {
+            height: 100vh;
+            padding: 50px;
+            border-bottom: 2px solid #ddd;
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-offset="50">
+
+    <!-- Bootstrap Navbar -->
+    <nav id="navbar-example" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">ScrollSpy Demo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#section1">Section 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#section2">Section 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#section3">Section 3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#section4">Section 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Scrollable Sections -->
+    <div class="container mt-5">
+        <div id="section1" class="section bg-primary text-white">
+            <h2>Section 1</h2>
+            <p>This is section 1.</p>
+        </div>
+        <div id="section2" class="section bg-secondary text-white">
+            <h2>Section 2</h2>
+            <p>This is section 2.</p>
+        </div>
+        <div id="section3" class="section bg-success text-white">
+            <h2>Section 3</h2>
+            <p>This is section 3.</p>
+        </div>
+        <div id="section4" class="section bg-danger text-white">
+            <h2>Section 4</h2>
+            <p>This is section 4.</p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+
+---
+
+### **📌 Explanation**
+| Feature | Bootstrap Class / Attribute | Description |
+|---------|----------------------------|-------------|
+| **Enable ScrollSpy** | `data-bs-spy="scroll"` | Enables ScrollSpy on the body |
+| **Target Navbar** | `data-bs-target="#navbar-example"` | Connects ScrollSpy with the navbar |
+| **Fixed Navbar** | `fixed-top` | Fixes the navbar to the top while scrolling |
+| **Section ID** | `id="section1"`, etc. | ScrollSpy tracks sections with these IDs |
+| **Active Link Update** | `nav-link` updates automatically | Highlights the active section |
+
+---
+
+This **ScrollSpy** demo allows users to click navbar links, scroll through sections, and see the active state update dynamically. 🎯 Let me know if you need any modifications! 🚀

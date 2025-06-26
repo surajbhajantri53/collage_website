@@ -1,0 +1,73 @@
+### **📌 Bootstrap Badges Example**  
+
+Bootstrap **Badges** are used to display additional information such as notifications, counts, or status labels. They can be used inside buttons, links, or as standalone elements.  
+
+---
+
+### **🚀 Features Covered:**  
+✔️ Basic Badges  
+✔️ Badges inside Buttons  
+✔️ Badges with Different Colors  
+✔️ Pill-Shaped Badges  
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Badges</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Bootstrap Badges Example</h2>
+
+        <!-- Basic Badges -->
+        <h4>Notification Badge: <span class="badge bg-primary">New</span></h4>
+        <h4>Status Badge: <span class="badge bg-success">Active</span></h4>
+
+        <!-- Badges in Buttons -->
+        <button type="button" class="btn btn-primary">
+            Messages <span class="badge bg-light text-dark">4</span>
+        </button>
+        <button type="button" class="btn btn-danger">
+            Alerts <span class="badge bg-warning text-dark">2</span>
+        </button>
+
+        <!-- Different Colors for Badges -->
+        <h4>Colored Badges:</h4>
+        <span class="badge bg-secondary">Secondary</span>
+        <span class="badge bg-success">Success</span>
+        <span class="badge bg-danger">Danger</span>
+        <span class="badge bg-warning text-dark">Warning</span>
+        <span class="badge bg-info text-dark">Info</span>
+
+        <!-- Pill Badges -->
+        <h4>Pill Badges:</h4>
+        <span class="badge rounded-pill bg-primary">Primary</span>
+        <span class="badge rounded-pill bg-success">Success</span>
+        <span class="badge rounded-pill bg-danger">Danger</span>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+---
+
+### **📌 Explanation**
+| Feature | Bootstrap Class | Description |
+|---------|----------------|-------------|
+| **Basic Badge** | `badge` | Defines a badge element |
+| **Badge Colors** | `bg-primary`, `bg-success`, `bg-danger` | Defines the background color |
+| **Badge in Button** | Inside `<button>` | Used to show counts in buttons |
+| **Pill Badges** | `rounded-pill` | Makes the badge rounded |
+
+---
+
+This **Badges** component helps in adding labels and counters effectively. 🚀 Let me know if you need any changes! 🎯

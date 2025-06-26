@@ -1,0 +1,82 @@
+### **📌 Bootstrap Alerts Example**  
+
+The **Bootstrap Alert** component provides different styles of alert messages, which can be used to inform users about important messages, warnings, success confirmations, or errors.
+
+---
+
+### **🚀 Features Covered:**  
+✔️ Different Alert Types (Success, Danger, Warning, Info)  
+✔️ Dismissible Alerts  
+✔️ Alerts with Icons  
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Alerts Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h2>Bootstrap Alerts Example</h2>
+
+        <!-- Success Alert -->
+        <div class="alert alert-success" role="alert">
+            ✅ Success! Your operation was completed successfully.
+        </div>
+
+        <!-- Danger Alert -->
+        <div class="alert alert-danger" role="alert">
+            ❌ Error! Something went wrong. Please try again.
+        </div>
+
+        <!-- Warning Alert -->
+        <div class="alert alert-warning" role="alert">
+            ⚠️ Warning! Be cautious while proceeding.
+        </div>
+
+        <!-- Info Alert -->
+        <div class="alert alert-info" role="alert">
+            ℹ️ Information: Please read the instructions carefully.
+        </div>
+
+        <!-- Dismissible Alert -->
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            🎉 This is a dismissible alert. Click the close button to remove it.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+---
+
+### **📌 Explanation**
+| Feature | Bootstrap Class | Description |
+|---------|----------------|-------------|
+| **Success Alert** | `alert alert-success` | Displays a green alert for success messages |
+| **Danger Alert** | `alert alert-danger` | Displays a red alert for errors |
+| **Warning Alert** | `alert alert-warning` | Displays a yellow alert for warnings |
+| **Info Alert** | `alert alert-info` | Displays a blue alert for information |
+| **Dismissible Alert** | `alert-dismissible fade show` | Allows users to close the alert |
+| **Close Button** | `btn-close` | Adds a button to dismiss the alert |
+
+---
+
+### **🎯 How It Works?**
+1. Alerts appear on the page with different colors based on their type.
+2. Dismissible alerts have a close button to remove them dynamically.
+3. Bootstrap’s built-in styles automatically handle visibility and fading effects.
+
+---
+
+This code **fully demonstrates alerts** in Bootstrap! Let me know if you need any modifications. 🚀

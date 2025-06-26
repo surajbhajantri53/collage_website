@@ -1,0 +1,104 @@
+# **🚀 Bootstrap Grid System**  
+
+### **📌 What is Bootstrap Grid System?**  
+The **Bootstrap Grid System** is a **flexible layout** based on **rows and columns**. It uses **12-column structure** and **responsive breakpoints** to adjust the layout for different screen sizes.  
+
+---
+
+## **🔹 Basic Structure of Grid System**
+- **`.row`**: Defines a row in the grid.  
+- **`.col`**: Defines a column inside a row.  
+- **Responsive Classes**:  
+  - `.col-` (Extra small devices, <576px)  
+  - `.col-sm-` (Small devices, ≥576px)  
+  - `.col-md-` (Medium devices, ≥768px)  
+  - `.col-lg-` (Large devices, ≥992px)  
+  - `.col-xl-` (Extra large devices, ≥1200px)  
+  - `.col-xxl-` (Super large devices, ≥1400px)  
+
+---
+
+## **1️⃣ Basic Grid System Example**
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Grid System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h2>Basic Grid System</h2>
+        <div class="row">
+            <div class="col bg-primary text-white p-3">Column 1</div>
+            <div class="col bg-secondary text-white p-3">Column 2</div>
+            <div class="col bg-success text-white p-3">Column 3</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+### **📌 Explanation**
+| Class | Description |
+|---------|-------------|
+| `.container` | Creates a centered layout container. |
+| `.row` | Defines a horizontal row. |
+| `.col` | Divides the row into equal columns. |
+| `.bg-primary` | Adds a blue background to the first column. |
+| `.bg-secondary` | Adds a gray background to the second column. |
+| `.bg-success` | Adds a green background to the third column. |
+
+---
+
+## **2️⃣ Responsive Grid Example**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Responsive Grid</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h2>Responsive Grid System</h2>
+        <div class="row">
+            <div class="col-sm-6 col-md-4 bg-warning p-3">Small (6 cols) / Medium (4 cols)</div>
+            <div class="col-sm-6 col-md-4 bg-danger text-white p-3">Small (6 cols) / Medium (4 cols)</div>
+            <div class="col-md-4 bg-info text-white p-3">Medium (4 cols) / Full-width in small</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+```
+
+### **📌 Explanation**
+| Class | Description |
+|---------|-------------|
+| `.col-sm-6` | Each column takes **6 columns** (half width) on small screens. |
+| `.col-md-4` | Each column takes **4 columns** (one-third width) on medium screens. |
+| `.bg-warning` | Adds a yellow background. |
+| `.bg-danger` | Adds a red background. |
+| `.bg-info` | Adds a blue background. |
+
+---
+
+## **🎯 When to Use the Bootstrap Grid System?**
+| **Use Case** | **Grid System Feature** |
+|-------------|----------------|
+| Equal-width columns | `.col` |
+| Responsive layouts | `.col-sm-`, `.col-md-`, etc. |
+| Fixed-width columns | `.col-3`, `.col-6`, etc. |
+| Centering content | `.row justify-content-center` |
+
+🚀 Now you can create **flexible** and **responsive** layouts using Bootstrap Grid! 🎨

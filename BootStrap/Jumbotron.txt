@@ -1,0 +1,79 @@
+### **📌 Bootstrap Jumbotron Example**  
+
+Bootstrap **Jumbotron** is used to create a large, eye-catching section to highlight key content on a webpage. It provides a spacious, well-padded area to grab user attention.  
+
+---
+
+### **🚀 Features Covered:**  
+✔️ Basic Jumbotron  
+✔️ Jumbotron with Background Image  
+✔️ Centered Jumbotron  
+
+---
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Jumbotron</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom Background Jumbotron */
+        .jumbotron-custom {
+            background: url('https://via.placeholder.com/1200x400') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Bootstrap Jumbotron Example</h2>
+
+        <!-- Basic Jumbotron -->
+        <div class="p-5 mb-4 bg-light rounded-3">
+            <div class="container">
+                <h1 class="display-4">Welcome to Bootstrap!</h1>
+                <p class="lead">This is a simple jumbotron-style component to highlight important content.</p>
+                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            </div>
+        </div>
+
+        <!-- Jumbotron with Background Image -->
+        <div class="jumbotron-custom">
+            <h1 class="display-4">Beautiful Background</h1>
+            <p class="lead">A stunning way to display highlighted content with an image.</p>
+            <a class="btn btn-light btn-lg" href="#" role="button">Explore</a>
+        </div>
+
+        <!-- Centered Jumbotron -->
+        <div class="p-5 bg-dark text-white text-center mt-4 rounded">
+            <h1>Centered Jumbotron</h1>
+            <p class="lead">Perfect for drawing attention to key sections of your website.</p>
+            <a class="btn btn-success btn-lg" href="#" role="button">Get Started</a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+---
+
+### **📌 Explanation**
+| Feature | Bootstrap Class | Description |
+|---------|----------------|-------------|
+| **Basic Jumbotron** | `p-5 bg-light rounded-3` | Creates a large, well-padded content block |
+| **Jumbotron with Background Image** | Custom CSS | Uses a full-width background image |
+| **Centered Jumbotron** | `p-5 bg-dark text-white text-center` | Centers text inside the jumbotron |
+
+---
+
+The **Jumbotron** component is great for making announcements or emphasizing important sections on your website. 🚀 Let me know if you need any modifications! 🎯

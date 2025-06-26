@@ -1,0 +1,95 @@
+# **📌 Bootstrap List Groups**  
+
+Bootstrap provides **list groups** to create flexible and customizable lists. List groups are used to display a series of content, such as menus, options, or navigation items.
+
+---
+
+## **1️⃣ Basic List Group**
+You can use `.list-group` and `.list-group-item` classes to create a simple list.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap List Groups</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h2>Basic List Group</h2>
+        <ul class="list-group">
+            <li class="list-group-item">Item 1</li>
+            <li class="list-group-item">Item 2</li>
+            <li class="list-group-item">Item 3</li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+---
+## **2️⃣ Active & Disabled List Items**
+Use `.active` to highlight an item and `.disabled` to make an item unclickable.
+
+
+<ul class="list-group">
+    <li class="list-group-item active">Active Item</li>
+    <li class="list-group-item">Normal Item</li>
+    <li class="list-group-item disabled">Disabled Item</li>
+</ul>
+
+---
+## **3️⃣ List Group with Links**
+Convert list items into clickable links using `<a>` elements with `.list-group-item-action`.
+
+### **📝 Code Example**
+
+<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action active">Active Link</a>
+    <a href="#" class="list-group-item list-group-item-action">Normal Link</a>
+    <a href="#" class="list-group-item list-group-item-action disabled">Disabled Link</a>
+</div>
+
+---
+## **4️⃣ List Group with Badges**
+Add badges to display additional information.
+
+### **📝 Code Example**
+
+<ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        Notifications <span class="badge bg-primary rounded-pill">4</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        Messages <span class="badge bg-success rounded-pill">2</span>
+    </li>
+</ul>
+
+---
+## **5️⃣ List Group with Different Colors**
+Use contextual classes to style list items.
+
+### **📝 Code Example**
+
+<ul class="list-group">
+    <li class="list-group-item list-group-item-primary">Primary Item</li>
+    <li class="list-group-item list-group-item-success">Success Item</li>
+    <li class="list-group-item list-group-item-danger">Danger Item</li>
+</ul>
+
+---
+## **🎯 Summary**
+| Feature | Class |
+|---------|-------------|
+| **Basic List Group** | `.list-group`, `.list-group-item` |
+| **Active Item** | `.active` |
+| **Disabled Item** | `.disabled` |
+| **Linked Items** | `.list-group-item-action` |
+| **Badges Inside List** | `.badge` |
+| **Colored List Items** | `.list-group-item-*` (primary, success, danger, etc.) |
+
+🚀 **Bootstrap list groups make structured content easy and stylish!** 🎨

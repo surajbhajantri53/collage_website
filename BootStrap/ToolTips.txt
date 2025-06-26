@@ -1,0 +1,89 @@
+### **📌 Bootstrap Tooltips Example**  
+
+The **Bootstrap Tooltip** component provides additional information when users hover over, focus on, or tap an element. It's useful for adding small hints to buttons, links, and other interactive elements.  
+
+---
+
+### **🚀 Features Covered:**  
+✔️ Basic Tooltip  
+✔️ Tooltip Positions (Top, Bottom, Left, Right)  
+✔️ Tooltip on Button Hover  
+✔️ Tooltip on Links  
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Tooltips Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h2>Bootstrap Tooltips Example</h2>
+        <p>Hover over the buttons below to see tooltips:</p>
+
+        <!-- Tooltip on Button -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on Top">
+            Tooltip on Top
+        </button>
+
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on Right">
+            Tooltip on Right
+        </button>
+
+        <button type="button" class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on Bottom">
+            Tooltip on Bottom
+        </button>
+
+        <button type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on Left">
+            Tooltip on Left
+        </button>
+
+        <hr>
+
+        <!-- Tooltip on Link -->
+        <p>
+            <a href="#" class="text-info" data-bs-toggle="tooltip" title="This is a tooltip on a link!">Hover over this link</a>
+        </p>
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Enable Tooltips -->
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    </script>
+
+</body>
+</html>
+
+
+---
+
+### **📌 Explanation**
+| Feature | Bootstrap Attribute | Description |
+|---------|---------------------|-------------|
+| **Enable Tooltip** | `data-bs-toggle="tooltip"` | Adds tooltip functionality |
+| **Tooltip Text** | `title="..."` | Defines the tooltip message |
+| **Tooltip Positioning** | `data-bs-placement="top/bottom/left/right"` | Sets tooltip placement |
+| **Initialize Tooltips** | `new bootstrap.Tooltip(element)` | Activates tooltips |
+
+---
+
+### **🎯 How It Works?**
+1. **Hover over the button or link** to see the tooltip.  
+2. **The tooltip appears** in the specified direction.  
+3. **Bootstrap JS is required** to initialize the tooltips.
+
+---
+
+This code **fully demonstrates tooltips** in Bootstrap! Let me know if you need modifications. 🚀

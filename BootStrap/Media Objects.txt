@@ -1,0 +1,99 @@
+### **📌 Bootstrap Media Objects**  
+
+Bootstrap **Media Objects** are used to align images or media (like videos) beside textual content. They are useful for creating **comments sections, blog posts, chat interfaces, testimonials**, etc.
+
+---
+
+### **🚀 Features Covered:**  
+✔️ Basic Media Object  
+✔️ Media Alignment (Left & Right)  
+✔️ Nested Media Objects  
+✔️ Media with Background & Borders  
+
+---
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Media Objects</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-4">
+    <h1 class="text-center">Bootstrap Media Objects Demo</h1>
+
+    <!-- Basic Media Object -->
+    <h2>Basic Media Object</h2>
+    <div class="media d-flex align-items-start">
+        <img src="https://via.placeholder.com/64" class="mr-3 rounded-circle" alt="Avatar">
+        <div class="media-body">
+            <h5 class="mt-0">Media Heading</h5>
+            This is a simple media object where the image is placed to the left.
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Media Object Aligned to Right -->
+    <h2>Media Object (Right Aligned)</h2>
+    <div class="media d-flex flex-row-reverse align-items-start">
+        <img src="https://via.placeholder.com/64" class="ml-3 rounded-circle" alt="Avatar">
+        <div class="media-body text-end">
+            <h5 class="mt-0">Right Aligned Media</h5>
+            Here the media object is aligned to the right using `flex-row-reverse`.
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Nested Media Objects -->
+    <h2>Nested Media Object</h2>
+    <div class="media d-flex align-items-start">
+        <img src="https://via.placeholder.com/64" class="mr-3 rounded-circle" alt="Avatar">
+        <div class="media-body">
+            <h5 class="mt-0">Main Media</h5>
+            This is a media object with a nested media object inside it.
+            <div class="media d-flex align-items-start mt-3">
+                <img src="https://via.placeholder.com/50" class="mr-3 rounded-circle" alt="Avatar">
+                <div class="media-body">
+                    <h6 class="mt-0">Nested Media</h6>
+                    This is a nested media object inside another media object.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Media Object with Background & Border -->
+    <h2>Media Object with Background & Border</h2>
+    <div class="media d-flex align-items-start p-3 bg-light border rounded">
+        <img src="https://via.placeholder.com/64" class="mr-3 rounded-circle" alt="Avatar">
+        <div class="media-body">
+            <h5 class="mt-0">Styled Media Object</h5>
+            This media object has a background and a border applied for better visibility.
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+
+---
+
+### **📌 Explanation**
+| Feature | Bootstrap Class | Description |
+|---------|----------------|-------------|
+| **Basic Media Object** | `.media`, `.media-body` | Creates a simple media object layout |
+| **Right Aligned Media** | `.flex-row-reverse` | Aligns the media image to the right |
+| **Nested Media Objects** | `.media` inside another `.media-body` | Creates a comment-reply structure |
+| **Media with Background & Border** | `.bg-light`, `.border`, `.rounded` | Adds a background and rounded border |
+
+---
+

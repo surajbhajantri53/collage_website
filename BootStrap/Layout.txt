@@ -1,0 +1,121 @@
+# **📌 Bootstrap Layout System**  
+
+Bootstrap provides multiple layout structures to create responsive and flexible web designs. It includes **Fixed Layout, Fluid Layout, and Responsive Layout**.  
+
+---
+
+## **1️⃣ Fixed Layout (Container)**
+A fixed layout is a centered layout with a **max-width** that changes at different breakpoints. It ensures content stays within a defined width.  
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Fixed Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container bg-light border p-4 mt-4">
+        <h2>Fixed Layout</h2>
+        <p>This layout is centered and has a maximum width depending on the screen size.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+### **📌 Explanation**
+| Class | Description |
+|---------|-------------|
+| `.container` | Defines a fixed-width layout with different max-widths at breakpoints. |
+| `.bg-light` | Adds a light background. |
+| `.border` | Adds a border to the container. |
+| `.p-4` | Adds padding. |
+| `.mt-4` | Adds margin at the top. |
+
+---
+
+## **2️⃣ Fluid Layout (Full Width)**
+A fluid layout uses **`container-fluid`** to span the entire screen width. It is useful for full-width designs.
+
+### **📝 Code Example**
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Fluid Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container-fluid bg-info text-white p-4">
+        <h2>Fluid Layout</h2>
+        <p>This layout stretches across the entire screen width.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+### **📌 Explanation**
+| Class | Description |
+|---------|-------------|
+| `.container-fluid` | Defines a full-width container that stretches across the screen. |
+| `.bg-info` | Adds a blue background. |
+| `.text-white` | Changes text color to white. |
+| `.p-4` | Adds padding. |
+
+---
+
+## **3️⃣ Responsive Layout (Grid-Based)**
+A **responsive layout** adjusts its columns and content based on the screen size.
+
+### **📝 Code Example**
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Responsive Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h2>Responsive Grid Layout</h2>
+        <div class="row">
+            <div class="col-md-4 bg-primary text-white p-3">Column 1</div>
+            <div class="col-md-4 bg-secondary text-white p-3">Column 2</div>
+            <div class="col-md-4 bg-success text-white p-3">Column 3</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+### **📌 Explanation**
+| Class | Description |
+|---------|-------------|
+| `.container` | Creates a fixed-width layout. |
+| `.row` | Creates a horizontal row. |
+| `.col-md-4` | Creates three columns (each occupying **4 of 12** grid spaces). |
+| `.bg-primary`, `.bg-secondary`, `.bg-success` | Adds background colors. |
+
+---
+
+## **🎯 When to Use Each Layout?**
+| **Layout Type** | **Use Case** |
+|---------------|------------|
+| **Fixed Layout (`.container`)** | When you want a **centered** design with limited width. |
+| **Fluid Layout (`.container-fluid`)** | When you want a **full-width** layout across all screens. |
+| **Responsive Layout (Grid)** | When you want **dynamic column adjustment** based on screen size. |
+
+🔥 Now you can create **structured, flexible, and responsive layouts** in Bootstrap! 🚀
