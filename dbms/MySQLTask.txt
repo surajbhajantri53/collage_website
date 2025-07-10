@@ -1,0 +1,80 @@
+Library Database Question Paper
+
+Part 1: Database and Table Creation
+
+Instructions:
+
+Create a database named librarydb. Then, create the following tables with their specified attributes and constraints.
+
+Table: author
+
+authorid (INT, Primary Key, Auto Increment)
+
+authorname (VARCHAR(100), NOT NULL)
+
+nationality (VARCHAR(100))
+
+birthdate (DATE)
+
+Table: book
+
+bookid (INT, Primary Key, Auto Increment)
+
+title (VARCHAR(200), NOT NULL)
+
+genre (VARCHAR(100), NOT NULL)
+
+publish_year (YEAR)
+
+authorid (INT, Foreign Key referencing authorid in author table, ON DELETE CASCADE)
+
+Table: library_member
+
+memberid (INT, Primary Key, Auto Increment)
+
+membername (VARCHAR(100), NOT NULL)
+
+email (VARCHAR(100), UNIQUE, NOT NULL)
+
+phone (VARCHAR(15), UNIQUE, NOT NULL)
+
+joindate (DATE, NOT NULL)
+
+Table: borrow
+
+borrowid (INT, Primary Key, Auto Increment)
+
+memberid (INT, Foreign Key referencing memberid in library_member table, ON DELETE CASCADE)
+
+bookid (INT, Foreign Key referencing bookid in book table, ON DELETE CASCADE)
+
+borrow_date (DATE, NOT NULL)
+
+return_date (DATE, NULL)
+
+Part 2: Query Problems
+
+Write SQL queries for the following:
+
+List all books along with their authors (Show book title and author name).
+
+Count the number of books by genre.
+
+Find members who have borrowed books but not returned them (Show member name and book title).
+
+Find the total number of books borrowed by each member.
+
+Find books that have never been borrowed.
+
+Find authors who have written more than one book.
+
+List all members along with the books they have borrowed (Include those who haven't borrowed any books).
+
+Find the average number of books borrowed per member.
+
+Get the total count of books available in the library.
+
+Find the member who has borrowed the most books.
+
+
+

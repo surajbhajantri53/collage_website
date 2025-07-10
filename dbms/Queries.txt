@@ -1,0 +1,419 @@
+
+**1. Creating the Database and Tables**
+
+First, create the database and switch to it:
+
+
+sql
+CREATE DATABASE gttcbca;
+USE gttcbca;
+
+to know as which user i am connected to db?
+
+ SELECT user();
+ 
+##############################################################################################################
+ 
+We should never user root user for project work. As it has the higest previlages. Instead we should create an user with same previlages. 
+Below superuser is created with root user previlages.
+
+CREATE USER 'superuser'@'localhost' IDENTIFIED BY 'Rohini12#';
+GRANT ALL PRIVILEGES ON *.* TO 'superuser'@'localhost';
+FLUSH PRIVILEGES;   - Optional Command
+
+💡 When do you need FLUSH PRIVILEGES;?
+If you manually modify the mysql.user or other privilege tables using INSERT, UPDATE, or DELETE, then you must run FLUSH PRIVILEGES; to apply those changes.
+
+###########################################################################################################################
+
+Then, create the `department`, `project`, and `empdetails` tables with appropriate constraints:
+
+
+CREATE TABLE department (
+    depid INT AUTO_INCREMENT PRIMARY KEY,
+    depname VARCHAR(100) NOT NULL,
+    location VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE project (
+    projid INT AUTO_INCREMENT PRIMARY KEY,
+    projname VARCHAR(100) NOT NULL,
+    depid INT,
+    FOREIGN KEY (depid) REFERENCES department(depid) ON DELETE CASCADE
+);
+
+CREATE TABLE empdetails (
+    empid INT AUTO_INCREMENT PRIMARY KEY,
+    empname VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    doj DATE NOT NULL,
+    sal DECIMAL(10,2) NOT NULL,
+    phone VARCHAR(15) UNIQUE NOT NULL,
+    depid INT,
+    projid INT,
+    FOREIGN KEY (depid) REFERENCES department(depid) ON DELETE SET NULL,
+    FOREIGN KEY (projid) REFERENCES project(projid) ON DELETE SET NULL
+);
+
+
+**2. Inserting Data into Tables**
+
+Populate the `department` table:
+
+
+
+INSERT INTO department (depname, location) VALUES
+('HR', 'New York'),
+('Finance', 'London'),
+('IT', 'San Francisco'),
+('Marketing', 'Berlin'),
+('Sales', 'Tokyo');
+
+
+Retrieve the generated `depid` values to use in the `project` table. Assuming they are 1 through 5, insert into `project`
+
+
+
+INSERT INTO project (projname, depid) VALUES
+('Alpha', 1),   -- HR
+('Beta', 2),    -- Finance
+('Gamma', 3),   -- IT
+('Delta', 4),   -- Marketing
+('Epsilon', 5); -- Sales
+
+Similarly, retrieve the generated `projid` values for the `empdetails` table. Assuming they are 1 through 5, insert into `empdetails`:
+
+
+sql
+INSERT INTO empdetails (empname, email, doj, sal, phone, depid, projid) VALUES
+('Alice Johnson', 'alice@example.com', '2022-01-15', 60000.00, '1234567890', 1, 1),
+('Bob Smith', 'bob@example.com', '2021-05-20', 75000.00, '1234567891', 2, 2),
+('Charlie Brown', 'charlie@example.com', '2020-07-30', 80000.00, '1234567892', 3, 3),
+('David Miller', 'david@example.com', '2023-02-10', 55000.00, '1234567893', 4, 4),
+('Emma Wilson', 'emma@example.com', '2019-11-25', 90000.00, '1234567894', 5, 5),
+('Frank Thomas', 'frank@example.com', '2022-06-14', 65000.00, '1234567895', 1, 2),
+('Grace Lee', 'grace@example.com', '2023-03-18', 70000.00, '1234567896', 2, 3),
+('Henry Carter', 'henry@example.com', '2020-09-08', 85000.00, '1234567897', 3, 4),
+('Ivy Scott', 'ivy@example.com', '2021-12-29', 72000.00, '1234567898', 4, 5),
+('Jack Turner', 'jack@example.com', '2018-10-05', 95000.00, '1234567899', 5, 1);
+
+
+
+**3. Primary Key Importance**
+
+A Primary Key uniquely identifies each row in a table and prevents duplicate entries. For example, attempting to insert a duplicate `depid` into the `department` table will result in an error:
+
+
+INSERT INTO department (depid, depname, location) VALUES (1, 'HR', 'Chicago');
+
+-- ERROR: Duplicate entry '1' for key 'PRIMARY'
+
+
+
+**4. Foreign Key Importance**
+
+Foreign Keys maintain referential integrity by ensuring that a referenced value exists in the parent table. For instance, inserting a project with a non-existent `depid` will fail
+
+
+sql
+INSERT INTO project (projname, depid) VALUES ('AI Research', 6);
+
+-- ERROR: Cannot add or update a child row: a foreign key constraint fails
+
+
+
+**5. Cascading Delete**
+
+The `ON DELETE CASCADE` option ensures that when a row in the parent table is deleted, all corresponding rows in the child table are automatically deleted. For example, deleting a department will automatically delete associated projects:
+
+
+sql
+DELETE FROM department WHERE depid = 1;
+-- Automatically deletes all projects related to department 1.
+
+
+
+**6. Preventing Orphan Records**
+
+Foreign Keys prevent deletion of a parent row if child rows are still linked to it, unless cascading delete is specified. Attempting to delete a department referenced by employees will result in an error:
+
+
+sql
+DELETE FROM department WHERE depid = 2;
+-- ERROR: Cannot delete or update a parent row: a foreign key constraint fails
+
+
+
+By ensuring that the SQL queries align with the table structures and constraints, you can maintain data integrity and consistency within your database. 
+
+
+1. **List All Employees with Their Department and Project Details**
+
+   Retrieve each employee's name, department, and project they are associated with:
+
+
+   SELECT 
+       e.empname AS Employee_Name,
+       d.depname AS Department_Name,
+       p.projname AS Project_Name
+   FROM 
+       empdetails e
+   LEFT JOIN 
+       department d ON e.depid = d.depid
+   LEFT JOIN 
+       project p ON e.projid = p.projid;
+   
+
+
+2. **Count of Employees in Each Department**
+
+   Determine the number of employees working in each department:
+
+
+   SELECT 
+       d.depname AS Department_Name,
+       COUNT(e.empid) AS Employee_Count
+   FROM 
+       department d
+   LEFT JOIN 
+       empdetails e ON d.depid = e.depid
+   GROUP BY 
+       d.depname;
+   
+
+
+3. **Projects Without Assigned Employees**
+
+   Identify projects that currently have no employees assigned:
+
+
+   SELECT 
+       p.projname AS Project_Name
+   FROM 
+       project p
+   LEFT JOIN 
+       empdetails e ON p.projid = e.projid
+   WHERE 
+       e.empid IS NULL;
+   
+
+
+4. **Employees with Salaries Above a Certain Threshold**
+
+   List employees earning more than ₹75,000:
+
+
+   SELECT 
+       empname AS Employee_Name,
+       sal AS Salary
+   FROM 
+       empdetails
+   WHERE 
+       sal > 75000;
+   
+
+
+5. **Average Salary by Department**
+
+   Calculate the average salary for each department:
+
+
+   SELECT 
+       d.depname AS Department_Name,
+       AVG(e.sal) AS Average_Salary
+   FROM 
+       department d
+   LEFT JOIN 
+       empdetails e ON d.depid = e.depid
+   GROUP BY 
+       d.depname;
+   
+
+
+6. **Employees Hired After a Specific Date**
+
+   Find employees who joined after January 1, 2022:
+
+
+   SELECT 
+       empname AS Employee_Name,
+       doj AS Date_of_Joining
+   FROM 
+       empdetails
+   WHERE 
+       doj > '2022-01-01';
+   
+
+
+7. **Departments Without Projects**
+
+   Identify departments that do not have any associated projects:
+
+
+   SELECT 
+       d.depname AS Department_Name
+   FROM 
+       department d
+   LEFT JOIN 
+       project p ON d.depid = p.depid
+   WHERE 
+       p.projid IS NULL;
+
+###################################################################################################
+
+
+   
+
+
+8. **Employees Not Assigned to Any Project**
+
+   List employees who are not currently assigned to any project:
+
+
+   SELECT 
+       empname AS Employee_Name
+   FROM 
+       empdetails
+   WHERE 
+       projid IS NULL;
+   
+
+
+9. **Total Salary Expenditure by Department**
+
+   Calculate the total salary expenditure for each department:
+
+
+   SELECT 
+       d.depname AS Department_Name,
+       SUM(e.sal) AS Total_Salary_Expenditure
+   FROM 
+       department d
+   LEFT JOIN 
+       empdetails e ON d.depid = e.depid
+   GROUP BY 
+       d.depname;
+   
+
+
+10. **Employees with Missing Email or Phone Information**
+
+    Find employees whose email or phone information is not available:
+
+ 
+    SELECT 
+        empname AS Employee_Name
+    FROM 
+        empdetails
+    WHERE 
+        email IS NULL OR phone IS NULL;
+
+###################################################################################################################
+
+Here are the `ALTER TABLE` and `DELETE TABLE` commands based on the `department`, `project`, and `empdetails` tables:
+
+---
+
+### **1. ALTER TABLE Commands**
+#### **Add a New Column**
+- Add a `manager` column to the `department` table:
+  ```sql
+  ALTER TABLE department ADD manager VARCHAR(100);
+  ```
+- Add a `budget` column to the `project` table:
+  ```sql
+  ALTER TABLE project ADD budget DECIMAL(12,2);
+  ```
+- Add an `address` column to the `empdetails` table:
+  ```sql
+  ALTER TABLE empdetails ADD address VARCHAR(255);
+  ```
+
+#### **Modify Column Data Type**
+- Change `location` in `department` to allow 150 characters:
+  ```sql
+  ALTER TABLE department MODIFY location VARCHAR(150);
+  ```
+- Increase `phone` length in `empdetails` to 20:
+  ```sql
+  ALTER TABLE empdetails MODIFY phone VARCHAR(20);
+  ```
+
+#### **Rename a Column**
+- Rename `sal` to `salary` in `empdetails`:
+  ```sql
+  ALTER TABLE empdetails CHANGE sal salary DECIMAL(10,2);
+  ```
+- Rename `depname` to `department_name` in `department`:
+  ```sql
+  ALTER TABLE department CHANGE depname department_name VARCHAR(100);
+  ```
+
+#### **Drop a Column**
+- Remove `manager` column from `department`:
+  ```sql
+  ALTER TABLE department DROP COLUMN manager;
+  ```
+- Remove `budget` column from `project`:
+  ```sql
+  ALTER TABLE project DROP COLUMN budget;
+  ```
+
+#### **Add a Foreign Key Constraint**
+- Add a foreign key between `empdetails` and `department` if missing:
+  ```sql
+  ALTER TABLE empdetails ADD CONSTRAINT fk_emp_department 
+  FOREIGN KEY (depid) REFERENCES department(depid) ON DELETE SET NULL;
+  ```
+- Add a foreign key between `empdetails` and `project` if missing:
+  ```sql
+  ALTER TABLE empdetails ADD CONSTRAINT fk_emp_project 
+  FOREIGN KEY (projid) REFERENCES project(projid) ON DELETE SET NULL;
+  ```
+
+#### **Drop a Foreign Key Constraint**
+- Drop the foreign key from `empdetails` to `department`:
+  ```sql
+  ALTER TABLE empdetails DROP FOREIGN KEY fk_emp_department;
+  ```
+- Drop the foreign key from `empdetails` to `project`:
+  ```sql
+  ALTER TABLE empdetails DROP FOREIGN KEY fk_emp_project;
+  ```
+
+---
+
+### **2. DELETE and DROP TABLE Commands**
+#### **Delete Specific Rows**
+- Delete a specific department:
+  ```sql
+  DELETE FROM department WHERE depid = 3;
+  ```
+- Delete all employees from the "HR" department:
+  ```sql
+  DELETE FROM empdetails WHERE depid = (SELECT depid FROM department WHERE depname = 'HR');
+  ```
+- Delete all employees earning more than ₹90,000:
+  ```sql
+  DELETE FROM empdetails WHERE salary > 90000;
+  ```
+
+#### **Delete All Rows in a Table**
+- Remove all records but keep the table structure:
+  ```sql
+  DELETE FROM department;
+  DELETE FROM project;
+  DELETE FROM empdetails;
+  ```
+
+#### **Drop Entire Table**
+- Completely remove the tables (cannot be undone):
+  ```sql
+  DROP TABLE empdetails;
+  DROP TABLE project;
+  DROP TABLE department;
+  ```
+
+---
+
+
