@@ -1,0 +1,149 @@
+
+
+## 💡 Object-Oriented Concepts in Java
+
+Java is an **Object-Oriented Programming (OOP)** language. It uses **classes and objects** to model real-world things. This helps in building **modular, reusable, and maintainable code**.
+
+---
+
+### 🔑 **4 Pillars of OOP in Java**
+
+| Pillar               | Meaning                                                  | Purpose                            |
+| -------------------- | -------------------------------------------------------- | ---------------------------------- |
+| 1. **Encapsulation** | Wrapping data (variables) and code (methods) together    | Data protection and control access |
+| 2. **Abstraction**   | Hiding internal details and showing only essential parts | Simplifies complexity              |
+| 3. **Inheritance**   | One class inherits properties of another                 | Reuse code from existing classes   |
+| 4. **Polymorphism**  | Same method behaves differently based on context         | Flexibility in code (many forms)   |
+
+---
+
+### 🔸 **1. Class and Object**
+
+* A **class** is a blueprint.
+* An **object** is an instance of that class.
+
+```java
+class Car {
+    String brand = "Toyota";
+    void start() {
+        System.out.println("Car is starting...");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car myCar = new Car();      // Object created
+        System.out.println(myCar.brand);
+        myCar.start();              // Method called
+    }
+}
+```
+
+---
+
+### 🔸 **2. Encapsulation**
+
+Protect data by keeping it private and accessing it using getters/setters.
+
+```java
+class Student {
+    private int marks;
+
+    public void setMarks(int m) {
+        marks = m;
+    }
+
+    public int getMarks() {
+        return marks;
+    }
+}
+```
+
+---
+
+### 🔸 **3. Inheritance**
+
+Use existing class features in a new class.
+
+```java
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog barks");
+    }
+}
+```
+
+---
+
+### 🔸 **4. Polymorphism**
+
+Same method name with different behavior:
+
+* **Method Overloading** (within same class):
+
+```java
+class Calculator {
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+    }
+}
+```
+
+* **Method Overriding** (in subclass):
+
+```java
+class Animal {
+    void sound() {
+        System.out.println("Some sound");
+    }
+}
+
+class Cat extends Animal {
+    void sound() {
+        System.out.println("Meow");
+    }
+}
+```
+
+---
+
+### 🔸 **5. Abstraction**
+
+Only show relevant details and hide inner logic.
+
+```java
+abstract class Shape {
+    abstract void draw();
+}
+
+class Circle extends Shape {
+    void draw() {
+        System.out.println("Drawing Circle");
+    }
+}
+```
+
+---
+
+### ✅ Summary Table
+
+| Concept       | Keyword                         | Purpose              |
+| ------------- | ------------------------------- | -------------------- |
+| Class/Object  | `class`, `new`                  | Blueprint / Instance |
+| Encapsulation | `private`, `get/set`            | Protect data         |
+| Inheritance   | `extends`                       | Code reuse           |
+| Polymorphism  | `@Override`, method overloading | Flexible code        |
+| Abstraction   | `abstract`                      | Hide complexity      |
+
+---
+

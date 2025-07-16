@@ -1,0 +1,103 @@
+### OOP in Java – Quiz (25 Questions)
+
+---
+
+#### Part A: Multiple Choice Questions (1 mark each)
+
+1. What is the blueprint for creating objects in Java?
+
+   * b) Class
+
+2. Which keyword is used to inherit a class in Java?
+
+   * c) extends
+
+3. What is the process of hiding internal details and showing only functionality?
+
+   * c) Abstraction
+
+4. Which of the following allows different implementations of the same method name?
+
+   * c) Polymorphism
+
+5. What does encapsulation help with?
+
+   * c) Protecting data
+
+6. Which keyword is used to define an abstract class?
+
+   * a) abstract
+
+7. Which concept allows one class to access features of another?
+
+   * b) Inheritance
+
+8. What will `super` keyword do in Java?
+
+   * b) Call parent class constructor
+
+9. What type of polymorphism does method overloading represent?
+
+   * a) Compile-time
+
+10. Which access modifier restricts access only within the class?
+
+* d) private
+
+---
+
+##Part B: True or False (1 mark each)
+
+11. True
+12. True
+13. False
+14. False
+15. True
+
+---
+
+#### ✍️ Part C: Fill in the Blanks (1 mark each)
+
+16. Object
+17. Inheritance
+18. Encapsulation
+19. Method overloading
+20. super
+
+---
+
+####  Part D: Code Output (2 marks each)
+
+21. Output:
+
+```
+Class B
+```
+
+22. Output:
+
+```
+Bark
+```
+
+23. Error:
+
+```
+Cannot access private variable 'age' directly. Use getter method instead.
+```
+
+24. Output:
+
+```
+8
+6.0
+```
+
+25. Output:
+
+```
+Base class
+```
+
+---
+

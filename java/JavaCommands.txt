@@ -1,0 +1,101 @@
+
+---
+
+## 🗒️ **Java Comments**
+
+Comments are lines in code that **Java ignores during execution**. They are used to **explain the code**, **improve readability**, and **make collaboration easier**.
+
+---
+
+### ✅ **Types of Comments in Java**
+
+Java supports **three types** of comments:
+
+### 1. **Single-line Comments** (`//`)
+
+* Starts with `//`
+* Used for **brief explanations**
+* Only applies to **one line**
+
+```java
+// This is a single-line comment
+int age = 25; // Variable to store age
+```
+
+---
+
+### 2. **Multi-line Comments** (`/* ... */`)
+
+* Starts with `/*` and ends with `*/`
+* Can span **multiple lines**
+* Used for **detailed explanations or temporarily disabling code**
+
+```java
+/*
+ This is a multi-line comment.
+ It explains the logic of the code below.
+*/
+int sum = a + b;
+```
+
+---
+
+### 3. **Javadoc Comments** (`/** ... */`)
+
+* Used to **generate documentation**
+* Always written **above classes, methods, or fields**
+* Begins with `/**` and ends with `*/`
+* Uses tags like `@param`, `@return`, `@author`
+
+```java
+/**
+ * This class performs basic arithmetic operations.
+ * @author Rohini
+ */
+public class Calculator {
+
+    /**
+     * Adds two numbers.
+     * @param a First number
+     * @param b Second number
+     * @return Sum of a and b
+     */
+    public int add(int a, int b) {
+        return a + b;
+    }
+}
+```
+
+To generate documentation:
+
+```bash
+javadoc Calculator.java
+```
+
+---
+
+### 🧠 **Why Use Comments?**
+
+* Explain **why** something is done (not just **what**).
+* Clarify **complex logic**.
+* Make code easier for others to **read, debug, and maintain**.
+* Help future-you understand past-you’s code!
+
+---
+
+### 🚫 Bad Practices
+
+❌ Don’t overuse comments for obvious code
+❌ Don’t write outdated or misleading comments
+❌ Don’t comment out large blocks of unused code permanently
+
+---
+
+### ✅ Best Practices
+
+✔ Use single-line comments for **short explanations**
+✔ Use multi-line comments for **clarifying logic**
+✔ Use Javadoc comments for **professional documentation**
+
+---
+

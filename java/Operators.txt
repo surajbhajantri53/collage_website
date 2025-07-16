@@ -1,0 +1,145 @@
+---
+
+## **What Are Operators in Java?**
+
+**Operators** are special symbols or keywords in Java used to perform **operations on variables and values**.
+Example: `+`, `-`, `*`, `/`, `==`, etc.
+
+---
+
+##  **Types of Operators in Java**
+
+| Category      | Purpose                                 |
+| ------------- | --------------------------------------- |
+| 1. Arithmetic | Perform basic math operations           |
+| 2. Relational | Compare values                          |
+| 3. Logical    | Combine boolean expressions             |
+| 4. Assignment | Assign values to variables              |
+| 5. Unary      | Operate on a single operand             |
+| 6. Bitwise    | Work on bits                            |
+| 7. Ternary    | Short-hand for `if-else` logic          |
+| 8. instanceof | Check if object is an instance of class |
+
+---
+
+###  **1. Arithmetic Operators**
+
+Used for mathematical operations.
+
+| Operator | Description         | Example  | Output |
+| -------- | ------------------- | -------- | ------ |
+| `+`      | Addition            | `10 + 5` | `15`   |
+| `-`      | Subtraction         | `10 - 5` | `5`    |
+| `*`      | Multiplication      | `10 * 5` | `50`   |
+| `/`      | Division            | `10 / 2` | `5`    |
+| `%`      | Modulus (Remainder) | `10 % 3` | `1`    |
+
+---
+
+###  **2. Relational (Comparison) Operators**
+
+Used to compare two values (results in `true` or `false`).
+
+| Operator | Meaning                  | Example  | Result |
+| -------- | ------------------------ | -------- | ------ |
+| `==`     | Equal to                 | `5 == 5` | true   |
+| `!=`     | Not equal to             | `5 != 3` | true   |
+| `>`      | Greater than             | `5 > 3`  | true   |
+| `<`      | Less than                | `5 < 3`  | false  |
+| `>=`     | Greater than or equal to | `5 >= 5` | true   |
+| `<=`     | Less than or equal to    | `4 <= 3` | false  |
+
+---
+
+###  **3. Logical Operators**
+
+Used for combining multiple boolean conditions.
+
+| Operator | Description | Example         | Result     |        |   |         |      |
+| -------- | ----------- | --------------- | ---------- | ------ | - | ------- | ---- |
+| `&&`     | Logical AND | `true && false` | false      |        |   |         |      |
+| \`       |             | \`              | Logical OR | \`true |   | false\` | true |
+| `!`      | Logical NOT | `!true`         | false      |        |   |         |      |
+
+---
+
+###  **4. Assignment Operators**
+
+Used to assign values to variables.
+
+| Operator | Description         | Example              |
+| -------- | ------------------- | -------------------- |
+| `=`      | Simple assignment   | `a = 10`             |
+| `+=`     | Add and assign      | `a += 5` (a = a + 5) |
+| `-=`     | Subtract and assign | `a -= 5`             |
+| `*=`     | Multiply and assign | `a *= 2`             |
+| `/=`     | Divide and assign   | `a /= 2`             |
+| `%=`     | Modulus and assign  | `a %= 3`             |
+
+---
+
+###  **5. Unary Operators**
+
+Work with only one operand.
+
+| Operator | Description          | Example       | Result |
+| -------- | -------------------- | ------------- | ------ |
+| `+`      | Unary plus           | `+a`          | `+a`   |
+| `-`      | Unary minus          | `-a`          | `-a`   |
+| `++`     | Increment (Pre/Post) | `++a` / `a++` | a + 1  |
+| `--`     | Decrement (Pre/Post) | `--a` / `a--` | a - 1  |
+| `!`      | Logical NOT          | `!true`       | false  |
+
+---
+
+###  **6. Bitwise Operators**
+
+Used to perform bit-level operations.
+
+| Operator | Description | Example    |     |     |
+| -------- | ----------- | ---------- | --- | --- |
+| `&`      | Bitwise AND | `5 & 3`    |     |     |
+| \`       | \`          | Bitwise OR | \`5 | 3\` |
+| `^`      | Bitwise XOR | `5 ^ 3`    |     |     |
+| `~`      | Bitwise NOT | `~5`       |     |     |
+| `<<`     | Left shift  | `5 << 1`   |     |     |
+| `>>`     | Right shift | `5 >> 1`   |     |     |
+
+---
+
+###  **7. Ternary Operator**
+
+A compact way to write `if-else`.
+
+```java
+int a = 10, b = 20;
+int max = (a > b) ? a : b;
+System.out.println("Maximum: " + max);  // Output: 20
+```
+
+---
+
+###  **8. instanceof Operator**
+
+Checks whether an object is an instance of a specific class.
+
+```java
+String name = "Java";
+System.out.println(name instanceof String);  // true
+```
+
+---
+
+##  Sample Code to Demonstrate Multiple Operators:
+
+```java
+public class OperatorDemo {
+    public static void main(String[] args) {
+        int a = 10, b = 5;
+        System.out.println("Addition: " + (a + b));
+        System.out.println("Greater than: " + (a > b));
+        System.out.println("AND condition: " + (a > 5 && b < 10));
+        System.out.println("Ternary: " + (a > b ? "A is greater" : "B is greater"));
+    }
+}
+```

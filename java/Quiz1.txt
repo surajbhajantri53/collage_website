@@ -1,0 +1,193 @@
+
+
+---
+
+### ✅ **OOP in Java – Quiz (25 Questions)**
+
+#### 🧠 **Part A: Multiple Choice Questions (1 mark each)**
+
+1. What is the blueprint for creating objects in Java?
+
+   * a) Object
+   * b) Class
+   * c) Method
+   * d) Package
+
+2. Which keyword is used to inherit a class in Java?
+
+   * a) inherit
+   * b) implements
+   * c) extends
+   * d) super
+
+3. What is the process of hiding internal details and showing only functionality?
+
+   * a) Encapsulation
+   * b) Inheritance
+   * c) Abstraction
+   * d) Polymorphism
+
+4. Which of the following allows different implementations of the same method name?
+
+   * a) Abstraction
+   * b) Overriding
+   * c) Polymorphism
+   * d) Encapsulation
+
+5. What does encapsulation help with?
+
+   * a) Faster code
+   * b) Better user interface
+   * c) Protecting data
+   * d) None of the above
+
+6. Which keyword is used to define an abstract class?
+
+   * a) abstract
+   * b) interface
+   * c) private
+   * d) static
+
+7. Which concept allows one class to access features of another?
+
+   * a) Polymorphism
+   * b) Inheritance
+   * c) Abstraction
+   * d) None
+
+8. What will `super` keyword do in Java?
+
+   * a) Call subclass constructor
+   * b) Call parent class constructor
+   * c) Create object
+   * d) None of the above
+
+9. What type of polymorphism does method overloading represent?
+
+   * a) Compile-time
+   * b) Run-time
+   * c) Both
+   * d) None
+
+10. Which access modifier restricts access only within the class?
+
+    * a) public
+    * b) protected
+    * c) default
+    * d) private
+
+---
+
+#### 🧩 **Part B: True or False (1 mark each)**
+
+11. A class can have multiple constructors in Java.
+12. You cannot create an object of an abstract class.
+13. Method overriding is an example of compile-time polymorphism.
+14. Private members can be accessed from outside using direct dot notation.
+15. The keyword `new` is used to create objects in Java.
+
+---
+
+#### ✍️ **Part C: Fill in the Blanks (1 mark each)**
+
+16. A \_\_\_\_\_\_\_\_\_\_ is an instance of a class.
+17. The process by which one class can acquire the properties of another is called \_\_\_\_\_\_\_\_\_\_.
+18. \_\_\_\_\_\_\_\_\_\_ is used to restrict access to certain components of a class.
+19. In polymorphism, \_\_\_\_\_\_\_\_\_\_ allows multiple methods with the same name but different signatures.
+20. The `__________` keyword is used to call the constructor of a parent class.
+
+---
+
+#### 🧠 **Part D: Code Output (2 marks each)**
+
+21. What is the output?
+
+```java
+class A {
+    void show() { System.out.println("Class A"); }
+}
+
+class B extends A {
+    void show() { System.out.println("Class B"); }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        A obj = new B();
+        obj.show();
+    }
+}
+```
+
+22. What is the output?
+
+```java
+abstract class Animal {
+    abstract void sound();
+}
+
+class Dog extends Animal {
+    void sound() { System.out.println("Bark"); }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Animal a = new Dog();
+        a.sound();
+    }
+}
+```
+
+23. Find the error in this code:
+
+```java
+class Person {
+    private int age;
+    void setAge(int a) { age = a; }
+    int getAge() { return age; }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Person p = new Person();
+        System.out.println(p.age);
+    }
+}
+```
+
+24. What is the output?
+
+```java
+class Overload {
+    int sum(int a, int b) { return a + b; }
+    double sum(double a, double b) { return a + b; }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Overload o = new Overload();
+        System.out.println(o.sum(5, 3));
+        System.out.println(o.sum(2.5, 3.5));
+    }
+}
+```
+
+25. What will be the result of the following?
+
+```java
+class Base {
+    void display() { System.out.println("Base class"); }
+}
+
+class Derived extends Base {}
+
+public class Test {
+    public static void main(String[] args) {
+        Derived d = new Derived();
+        d.display();
+    }
+}
+```
+
+---
+

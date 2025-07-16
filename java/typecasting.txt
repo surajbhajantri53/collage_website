@@ -1,0 +1,195 @@
+
+## Type Casting in Java
+
+**Type Casting** means **changing one data type into another**. This is useful when you want to assign a value of one type to a variable of another type.
+
+---
+
+### Why Type Casting is Needed
+
+Java is a **strongly typed language**. It does not allow you to assign a value of one type to a variable of another type directly, unless they are compatible.
+
+Example:
+You **can** assign an `int` to a `double`, but you **cannot** assign a `double` to an `int` without converting it.
+
+---
+
+### Two Types of Type Casting:
+
+---
+
+### 1. **Widening Type Casting** (Automatic)
+
+* Also called **implicit casting**
+* Happens **automatically**
+* Converts **smaller data types** into **larger data types**
+* **No data loss** happens
+
+**Order of widening**:
+
+```
+byte → short → int → long → float → double
+```
+
+**Example:**
+
+```java
+int a = 10;
+double b = a;  // Automatically converts int to double
+System.out.println(b);  // Output: 10.0
+```
+
+---
+
+### 2. **Narrowing Type Casting** (Manual)
+
+* Also called **explicit casting**
+* You have to do it **manually**
+* Converts **larger data types** into **smaller data types**
+* **Data loss** might happen
+
+**Syntax**:
+
+```java
+datatype variable = (datatype) value;
+```
+
+**Example:**
+
+```java
+double a = 9.78;
+int b = (int) a;  // Manually converts double to int
+System.out.println(b);  // Output: 9 (decimal part lost)
+```
+
+---
+
+### Difference Between Widening and Narrowing:
+
+| Widening Casting                 | Narrowing Casting                |
+| -------------------------------- | -------------------------------- |
+| Small → Big (e.g., int → double) | Big → Small (e.g., double → int) |
+| Done automatically               | Done manually using `(type)`     |
+| Safe, no data loss               | Risk of data loss                |
+
+---
+
+### Example Program:
+
+```java
+public class CastingExample {
+    public static void main(String[] args) {
+        // Widening (automatic)
+        int x = 20;
+        double y = x;
+        System.out.println("Widening: " + y);  // Output: 20.0
+
+        // Narrowing (manual)
+        double a = 45.67;
+        int b = (int) a;
+        System.out.println("Narrowing: " + b);  // Output: 45
+    }
+}
+```
+
+---
+
+
+Great question!
+
+No — **Java supports many types of type conversions**, not just between `int` and `double`.
+
+Let me explain clearly:
+
+---
+
+## Java Type Casting – More Than Just int to double
+
+There are **two categories** of type conversions in Java:
+
+---
+
+### 1. **Primitive Type Casting**
+
+This is what we’ve already discussed — converting between primitive types like:
+
+* `int → double`
+* `double → int`
+* `float → int`
+* `long → byte`, etc.
+
+Example:
+
+```java
+int a = 10;
+double b = a; // widening (automatic)
+
+double x = 99.99;
+int y = (int) x; // narrowing (manual)
+```
+
+---
+
+### 2. **Non-Primitive Type Conversion** (or Type Parsing)
+
+This includes **converting between objects**, like:
+
+* `String → int`
+* `int → String`
+* `String → double`
+* `String → char`, etc.
+
+These **cannot** be done using simple casting. Instead, **Java provides built-in methods** for them.
+
+---
+
+### Examples of Non-Primitive Type Conversion:
+
+#### a. Convert `String` to `int`:
+
+```java
+String s = "123";
+int x = Integer.parseInt(s);
+```
+
+#### b. Convert `int` to `String`:
+
+```java
+int x = 456;
+String s = String.valueOf(x);
+// or
+String s2 = Integer.toString(x);
+```
+
+#### c. Convert `String` to `double`:
+
+```java
+String s = "98.76";
+double d = Double.parseDouble(s);
+```
+
+#### d. Convert `double` to `String`:
+
+```java
+double d = 45.6;
+String s = String.valueOf(d);
+```
+
+---
+
+### Important Notes:
+
+* These conversions **require method calls**, not simple casting.
+* If the `String` contains **non-numeric characters**, parsing will throw a **NumberFormatException**.
+
+Example:
+
+```java
+String s = "abc";
+int x = Integer.parseInt(s); // Error!
+```
+
+---
+
+
+

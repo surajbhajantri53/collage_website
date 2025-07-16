@@ -1,0 +1,75 @@
+
+## 🧾 **Scanner Class in Java**
+
+### ✅ **What is the Scanner Class?**
+
+The `Scanner` class in Java is used to **read input from the user** (from keyboard). It is part of the `java.util` package.
+
+---
+
+### ✅ **Importing Scanner Class**
+
+To use the `Scanner` class, we need to **import** it:
+
+```java
+import java.util.Scanner;
+```
+
+---
+
+### ✅ **Creating a Scanner Object**
+
+```java
+Scanner sc = new Scanner(System.in);
+```
+
+* `sc` is the object name.
+* `System.in` means the input will come from the **keyboard**.
+
+---
+
+### ✅ **Common Scanner Methods**
+
+| Method          | Description                 |
+| --------------- | --------------------------- |
+| `nextLine()`    | Reads a whole line (string) |
+| `next()`        | Reads a single word         |
+| `nextInt()`     | Reads an `int`              |
+| `nextDouble()`  | Reads a `double`            |
+| `nextFloat()`   | Reads a `float`             |
+| `nextBoolean()` | Reads a `boolean`           |
+
+---
+
+### ✅ **Simple Example**
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);  // Creating Scanner object
+
+        System.out.print("Enter your name: ");
+        String name = sc.nextLine();          // Reading string
+
+        System.out.print("Enter your age: ");
+        int age = sc.nextInt();               // Reading integer
+
+        System.out.println("Hello, " + name + "! You are " + age + " years old.");
+
+        sc.close();   // Always close the scanner to free resources
+    }
+}
+```
+
+---
+
+### ✅ **Sample Output**
+
+```
+Enter your name: Rohini
+Enter your age: 25
+Hello, Rohini! You are 25 years old.
+```
+

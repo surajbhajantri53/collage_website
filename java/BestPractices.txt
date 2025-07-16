@@ -1,0 +1,180 @@
+
+---
+
+## ✅ **Java Coding Standards**
+
+Java coding standards are a set of **rules and guidelines** to write clean, readable, maintainable, and consistent code. Following these standards is important for collaboration and quality.
+
+---
+
+### 📌 **1. Class Naming Conventions**
+
+* Class names should be **nouns**, written in **PascalCase** (each word starts with a capital).
+* Example:
+  ✅ `Student`, `EmployeeDetails`, `BankAccount`
+  ❌ `student`, `employee_details`
+
+```java
+public class Student {
+    // class content
+}
+```
+
+---
+
+### 📌 **2. Method Naming Conventions**
+
+* Method names should be **verbs** and written in **camelCase**.
+* Example:
+  ✅ `calculateMarks()`, `getName()`
+  ❌ `Calculate_marks()`
+
+```java
+public void calculateMarks() {
+    // logic
+}
+```
+
+---
+
+### 📌 **3. Variable Naming Conventions**
+
+* Variable names should be in **camelCase** and meaningful.
+* Example:
+  ✅ `studentName`, `totalMarks`
+  ❌ `Student_Name`, `x`, `temp1`
+
+```java
+int studentAge = 20;
+```
+
+---
+
+### 📌 **4. Constant Naming**
+
+* Constants should be in **UPPER\_CASE\_WITH\_UNDERSCORES**.
+* Example:
+  ✅ `PI`, `MAX_VALUE`, `DEFAULT_TIMEOUT`
+
+```java
+public static final double PI = 3.1416;
+```
+
+---
+
+### 📌 **5. Indentation & Braces**
+
+* Use **4 spaces** for indentation.
+* Always use **curly braces `{}`** even for single-line blocks.
+
+```java
+if (marks > 35) {
+    System.out.println("Pass");
+}
+```
+
+---
+
+### 📌 **6. File Naming**
+
+* Java file name should **match the public class name**.
+
+```java
+// File: Student.java
+public class Student {
+    // code
+}
+```
+
+---
+
+### 📌 **7. Comments and Documentation**
+
+* Use comments to explain **why** something is done, not **what** is done.
+* Use `//` for single-line comments and `/* */` for multi-line.
+* Use Javadoc (`/** */`) for method and class descriptions.
+
+```java
+/**
+ * This method calculates total marks.
+ */
+public int calculateTotal() {
+    // logic
+}
+```
+
+---
+
+### 📌 **8. White Spaces**
+
+* Use white spaces **around operators**, after commas, and after keywords.
+
+```java
+int sum = a + b;
+System.out.println("Result: " + sum);
+```
+
+---
+
+### 📌 **9. Avoid Magic Numbers**
+
+* Use **named constants** instead of hardcoded numbers.
+
+```java
+// Bad
+if (salary > 100000) { ... }
+
+// Good
+final int MAX_SALARY = 100000;
+if (salary > MAX_SALARY) { ... }
+```
+
+---
+
+### 📌 **10. Use Proper Access Modifiers**
+
+* Make variables `private` and use **getters/setters** for access.
+* Make utility methods `static` if they don’t depend on instance state.
+
+```java
+private String name;
+
+public String getName() {
+    return name;
+}
+```
+
+---
+
+### 📌 **11. Exception Handling**
+
+* Always handle exceptions properly using `try-catch`.
+
+```java
+try {
+    int result = 10 / 0;
+} catch (ArithmeticException e) {
+    System.out.println("Cannot divide by zero");
+}
+```
+
+---
+
+### 📌 **12. Keep Methods Short**
+
+* Each method should do **only one thing**.
+* Ideal method size: **10–30 lines**.
+
+---
+
+### 🧾 Summary Table
+
+| Element   | Convention Example |
+| --------- | ------------------ |
+| Class     | `EmployeeData`     |
+| Method    | `calculateBonus()` |
+| Variable  | `totalAmount`      |
+| Constant  | `MAX_LIMIT`        |
+| File Name | `Employee.java`    |
+
+---
