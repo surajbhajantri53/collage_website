@@ -1,0 +1,80 @@
+### **Global vs Local Variables, Modules, and Packages in Python (with Simple Examples)**  
+
+#### **1. Global vs Local Variables**  
+In Python, variables can be **global** or **local**, depending on where they are declared.  
+
+- **Global Variable:** Defined outside any function and can be accessed anywhere in the script.  
+- **Local Variable:** Defined inside a function and accessible only within that function.  
+
+**Example:**  
+```python
+x = 10  # Global variable
+
+def my_function():
+    y = 5  # Local variable
+    print("Local Variable:", y)
+    print("Accessing Global Variable inside function:", x)
+
+my_function()
+print("Global Variable:", x)
+# print(y)  # This will give an error because y is local
+```
+
+---
+
+#### **2. Modules in Python**  
+A module is a **Python file** (.py) that contains functions, classes, and variables. It allows **code reusability**.  
+
+**Creating a module (`mymodule.py`):**  
+```python
+def greet(name):
+    return f"Hello, {name}!"
+```
+
+**Using the module in another script (`main.py`):**  
+```python
+import mymodule
+
+print(mymodule.greet("John"))  # Output: Hello, John!
+```
+
+You can also **import specific functions** from a module:  
+```python
+from mymodule import greet
+
+print(greet("Alice"))
+```
+
+---
+
+#### **3. Packages in Python**  
+A **package** is a collection of modules inside a directory that contains an `__init__.py` file.  
+
+**Example Directory Structure:**  
+```
+mypackage/
+│── __init__.py
+│── module1.py
+│── module2.py
+```
+
+**Creating a package (`mypackage/module1.py`):**  
+```python
+def say_hello():
+    return "Hello from module1"
+```
+
+**Using the package in a script (`main.py`):**  
+```python
+from mypackage import module1
+
+print(module1.say_hello())  # Output: Hello from module1
+```
+
+---
+
+### **Summary**
+1. **Global variables** are accessible throughout the script, while **local variables** exist only inside functions.  
+2. **Modules** are separate Python files that can be imported and reused.  
+3. **Packages** are collections of modules organized into directories.
+
