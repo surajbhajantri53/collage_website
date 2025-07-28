@@ -1,0 +1,165 @@
+Here’s a curated list of **important Standard Python Libraries** you should know, along with a short explanation for each:
+
+---
+
+### 🔹 **1. `math`**
+
+Provides mathematical functions like `sqrt`, `pow`, `sin`, `cos`, etc.
+
+```python
+import math
+print(math.sqrt(25))  # Output: 5.0
+```
+
+---
+
+### 🔹 **2. `random`**
+
+Used for generating random numbers, selections.
+
+```python
+import random
+print(random.randint(1, 10))         # Random number between 1 and 10
+print(random.choice(['a', 'b', 'c']))  # Random choice from list
+```
+
+---
+
+### 🔹 **3. `datetime`**
+
+Helps with date and time manipulation.
+
+```python
+import datetime
+print(datetime.datetime.now())  # Current date and time
+```
+
+---
+
+### 🔹 **4. `time`**
+
+Used to handle time-related tasks like delays, timestamps.
+
+```python
+import time
+time.sleep(2)  # Waits for 2 seconds
+print("Done waiting")
+```
+
+---
+
+### 🔹 **5. `os`**
+
+Interacts with the operating system: file paths, directories.
+
+```python
+import os
+print(os.getcwd())  # Current directory
+```
+
+---
+
+### 🔹 **6. `sys`**
+
+Access system-specific parameters and functions.
+
+```python
+import sys
+print(sys.version)  # Python version info
+```
+
+---
+
+### 🔹 **7. `statistics`**
+
+Performs statistical operations like mean, median, mode.
+
+```python
+import statistics
+print(statistics.mean([1, 2, 3, 4]))  # Output: 2.5
+```
+
+---
+
+### 🔹 **8. `json`**
+
+Converts between JSON strings and Python dictionaries.
+
+```python
+import json
+data = {"name": "John", "age": 30}
+json_str = json.dumps(data)
+print(json_str)
+```
+
+---
+
+### 🔹 **9. `csv`**
+
+Read/write CSV files easily.
+
+```python
+import csv
+with open('sample.csv', 'w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerow(['Name', 'Age'])
+    writer.writerow(['Alice', 25])
+```
+
+---
+
+### 🔹 **10. `re`**
+
+Handles regular expressions for pattern matching.
+
+```python
+import re
+print(re.findall(r'\d+', 'My number is 12345'))  # Output: ['12345']
+```
+
+---
+
+### 🔹 **11. `collections`**
+
+Specialized container datatypes like `Counter`, `deque`, `defaultdict`.
+
+```python
+from collections import Counter
+print(Counter("banana"))  # Output: Counter({'a': 3, 'b': 1, 'n': 2})
+```
+
+---
+
+### 🔹 **12. `shutil`**
+
+File and directory operations (copy, move, etc.)
+
+```python
+import shutil
+# shutil.copy('source.txt', 'destination.txt')
+```
+
+---
+
+### 🔹 **13. `logging`**
+
+Provides a flexible logging system for debugging and info logs.
+
+```python
+import logging
+logging.basicConfig(level=logging.INFO)
+logging.info("This is an info message.")
+```
+
+---
+
+### 🔹 **14. `urllib`**
+
+Used for fetching data across the web.
+
+```python
+import urllib.request
+# response = urllib.request.urlopen('http://example.com')
+# html = response.read()
+```
+

@@ -1,0 +1,158 @@
+# **Basic Concepts of OOPs in Python (with Examples)**
+
+from abc import ABC, abstractmethod
+Object-Oriented Programming(**OOPs**) is a programming paradigm based on the concept of ** objects ** and **classes**.
+Python supports OOPs, allowing for efficient code organization and reusability.
+
+# **1. Key Concepts of OOPs in Python**
+1. ** Class and Object**
+2. ** Encapsulation**
+3. ** Inheritance**
+4. ** Polymorphism**
+5. ** Abstraction**
+
+---
+
+# **1. Class and Object**
+A ** class ** is a blueprint for creating objects. An ** object ** is an instance of a class .
+
+**Example: **
+```python
+
+
+class Car:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+    def display_info(self):
+        print(f"Car: {self.brand} {self.model}")
+
+
+# Creating objects
+car1 = Car("Toyota", "Corolla")
+car2 = Car("Honda", "Civic")
+
+car1.display_info()  # Output: Car: Toyota Corolla
+car2.display_info()  # Output: Car: Honda Civic
+```
+
+---
+
+# **2. Encapsulation**
+Encapsulation restricts direct access to some data, ensuring data security.
+
+**Example: **
+```python
+
+
+class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance  # Private variable
+
+    def deposit(self, amount):
+        self.__balance += amount
+
+    def get_balance(self):
+        return self.__balance
+
+
+account = BankAccount(1000)
+account.deposit(500)
+print(account.get_balance())  # Output: 1500
+# print(account.__balance)  # This will cause an error
+```
+
+---
+
+# **3. Inheritance**
+Inheritance allows a class to derive properties and methods from another class .
+
+**Example: **
+```python
+
+
+class Animal:
+    def speak(self):
+        print("Animal speaks")
+
+
+class Dog(Animal):
+    def speak(self):
+        print("Dog barks")
+
+
+dog = Dog()
+dog.speak()  # Output: Dog barks
+```
+
+---
+
+# **4. Polymorphism**
+Polymorphism allows methods to have different behaviors in different classes.
+
+**Example: **
+```python
+
+
+class Cat:
+    def sound(self):
+        return "Meow"
+
+
+class Dog:
+    def sound(self):
+        return "Bark"
+
+
+# Using polymorphism
+for animal in [Cat(), Dog()]:
+    print(animal.sound())
+
+# Output:
+# Meow
+# Bark
+```
+
+---
+
+# **5. Abstraction**
+Abstraction hides implementation details and only exposes the necessary parts.
+
+**Example: **
+```python
+
+
+class Vehicle(ABC):
+    @abstractmethod
+    def start(self):
+        pass
+
+
+class Car(Vehicle):
+    def start(self):
+        print("Car starts with a key")
+
+
+class Bike(Vehicle):
+    def start(self):
+        print("Bike starts with a self-start button")
+
+
+car = Car()
+bike = Bike()
+
+car.start()  # Output: Car starts with a key
+bike.start()  # Output: Bike starts with a self-start button
+```
+
+---
+
+# **Summary**
+1. ** Class & Object ** - Blueprint and instance.
+2. ** Encapsulation ** - Restricts direct access to data.
+3. ** Inheritance ** - Allows reuse of code.
+4. ** Polymorphism ** - Same method name, different behavior.
+5. ** Abstraction ** - Hides details and shows only functionality.
+
+Would you like more details on any concept? 🚀

@@ -1,0 +1,73 @@
+**C Brushup: Fundamentals of Programming**
+
+## **1. Meaning of Programming Language**
+A **programming language** is a formal set of instructions that a computer can understand and execute. It allows developers to write software applications, automate tasks, and perform various computational operations. Programming languages can be broadly classified into:
+- **Low-level languages** (Machine Code, Assembly Language)
+- **High-level languages** (C, Python, Java, etc.)
+- **Scripting languages** (JavaScript, PHP)
+
+## **2. Technical Terms**
+
+### **a) Error**
+	An error in programming is a fault or bug in a program that prevents it from executing correctly. Common types of errors include:
+- **Syntax Errors**: Mistakes in the structure of code (e.g., missing semicolon).
+- **Runtime Errors**: Errors that occur during execution (e.g., division by zero).
+- **Logical Errors**: Errors that produce incorrect results due to faulty logic.
+
+### **b) Linker**
+A **linker** is a tool that combines multiple object files into a single executable file. It resolves references between different code modules and ensures the program runs as expected.
+
+### **c) Loader**
+A **loader** is part of the operating system that loads the executable program into memory and prepares it for execution.
+
+### **d) Compiler**
+A **compiler** is a program that converts high-level source code into machine code that a computer can understand. It checks for syntax errors and optimizes code before execution.
+
+### **e) OS Dependent & OS Independent**
+- **OS Dependent** programs work only on a specific operating system (e.g., .EXE files for Windows).
+- **OS Independent** programs can run on multiple operating systems (e.g., Java programs that use JVM).
+
+### **f) Library**
+A **library** is a collection of precompiled routines or functions that developers can use in their programs to save time and effort (e.g., C Standard Library, Python Modules).
+
+### **g) EXE Files**
+An **.EXE (Executable) file** is a binary file that contains a compiled program ready to run on Windows operating systems.
+
+## **3. Algorithm, Flowchart & Pseudocode**
+
+### **a) Algorithm**
+An **algorithm** is a step-by-step procedure to solve a problem. Example:
+**Finding the sum of two numbers:**
+1. Start
+2. Take two numbers as input
+3. Add them
+4. Display the sum
+5. Stop
+
+### **b) Flowchart**
+A **flowchart** is a graphical representation of an algorithm using symbols:
+- **Oval**: Start/End
+- **Parallelogram**: Input/Output
+- **Rectangle**: Process (e.g., calculations)
+- **Diamond**: Decision-making (e.g., if-else conditions)
+
+### **c) Pseudocode**
+**Pseudocode** is a high-level description of a program written in simple English-like language. Example:
+```
+START
+INPUT num1, num2
+SUM = num1 + num2
+PRINT SUM
+STOP
+```
+
+## **4. Basic Programming Concepts**
+1. **Variables & Data Types** - Used to store data (int, float, string, etc.).
+2. **Operators** - Used for calculations and logic (e.g., +, -, *, /, &&, ||).
+3. **Conditional Statements** - if, if-else, switch-case.
+4. **Loops** - for, while, do-while for repetition.
+5. **Functions** - Blocks of reusable code to perform tasks.
+
+---
+This guide provides a foundation for understanding programming concepts before moving on to Python.
+

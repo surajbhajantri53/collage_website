@@ -1,0 +1,135 @@
+**Functions in Python**
+
+## **1. Introduction to Functions**
+A function is a block of code that performs a specific task. Functions help in code reusability, modularity, and improving readability.
+
+Python provides two types of functions:
+1. **Built-in Functions** – Predefined functions available in Python.
+2. **User-Defined Functions** – Functions created by programmers.
+
+---
+## **2. Built-in Functions in Python**
+Python provides many built-in functions that can be used without defining them explicitly. Some common built-in functions include:
+
+| Function | Description |
+|----------|-------------|
+| `print()` | Displays output |
+| `len()` | Returns the length of an object |
+| `type()` | Returns the type of an object |
+| `int()`, `float()`, `str()` | Converts values to integer, float, or string |
+| `max()`, `min()` | Finds the maximum and minimum values in an iterable |
+| `sum()` | Returns the sum of all elements in an iterable |
+| `abs()` | Returns the absolute value of a number |
+| `sorted()` | Returns a sorted list |
+| `input()` | Takes user input |
+| `range()` | Generates a sequence of numbers |
+
+### **Example of Built-in Functions:**
+```python
+x = [10, 20, 30]
+print(len(x))      # Output: 3
+print(sum(x))      # Output: 60
+print(max(x))      # Output: 30
+```
+
+---
+## **3. User-Defined Functions**
+### **Defining a Function**
+A function is defined using the `def` keyword.
+
+### **Syntax:**
+```python
+def function_name(parameters):
+    """Docstring explaining the function."""
+    # Function body
+    return value  # (Optional)
+```
+
+### **Example of a User-Defined Function:**
+```python
+def greet(name):
+    """Function to greet the user."""
+    print("Hello, " + name + "!")
+
+greet("Alice")  # Output: Hello, Alice!
+```
+
+### **Returning Values from Functions:**
+```python
+def square(num):
+    return num * num
+
+result = square(5)
+print(result)  # Output: 25
+```
+
+---
+## **4. Parameter Passing Mechanism**
+Python supports different ways of passing parameters to functions:
+
+### **1. Positional Arguments**
+Parameters are passed in the order they appear in the function definition.
+```python
+def add(a, b):
+    return a + b
+
+print(add(3, 5))  # Output: 8
+```
+
+### **2. Default Arguments**
+Default values can be assigned to parameters.
+```python
+def greet(name="User"):
+    print("Hello, " + name + "!")
+
+greet()        # Output: Hello, User!
+greet("John")  # Output: Hello, John!
+```
+
+### **3. Keyword Arguments**
+Arguments can be passed using parameter names.
+```python
+def describe_pet(animal, name):
+    print(f"I have a {animal} named {name}.")
+
+describe_pet(name="Buddy", animal="dog")
+```
+
+### **4. Variable-Length Arguments**
+Python allows functions to accept variable numbers of arguments using `*args` (non-keyword) and `**kwargs` (keyword arguments).
+
+#### **Using `*args` (Non-Keyword Arguments)**
+```python
+def sum_numbers(*numbers):
+    return sum(numbers)
+
+print(sum_numbers(1, 2, 3, 4))  # Output: 10
+```
+
+#### **Using `**kwargs` (Keyword Arguments)**
+```python
+def display_info(**info):
+    for key, value in info.items():
+        print(f"{key}: {value}")
+
+display_info(name="Alice", age=25, city="New York")
+```
+
+---
+## **5. Key Differences Between Built-in and User-Defined Functions**
+
+| Feature | Built-in Functions | User-Defined Functions |
+|---------|------------------|------------------|
+| **Definition** | Predefined in Python | Created by the user |
+| **Example** | `print()`, `len()` | `def my_function()` |
+| **Customization** | Cannot be modified | Fully customizable |
+| **Usage** | General-purpose | Specific tasks as per requirement |
+
+---
+## **6. Summary**
+- Python provides **built-in functions** like `print()`, `len()`, `sum()`, etc.
+- **User-defined functions** allow users to create reusable blocks of code.
+- Python supports different **parameter passing mechanisms** like positional, default, keyword, and variable-length arguments.
+
+This guide covers **functions and parameter passing in Python**. Let me know if you need modifications or the next topic! 🚀
+

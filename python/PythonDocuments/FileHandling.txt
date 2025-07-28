@@ -1,0 +1,120 @@
+
+
+---
+
+## 📂 File Handling in Python
+
+File handling is used to **create**, **read**, **write**, and **delete files** in Python.
+
+---
+
+### 🔹 1. Opening a File
+
+Python uses the `open()` function to open a file.
+
+```python
+file = open("example.txt", "r")  # "r" is for read mode
+```
+
+**Modes**:
+
+| Mode | Description             |
+| ---- | ----------------------- |
+| `r`  | Read (default)          |
+| `w`  | Write (overwrites file) |
+| `a`  | Append (adds to end)    |
+| `x`  | Create a new file       |
+| `b`  | Binary mode             |
+| `t`  | Text mode (default)     |
+
+---
+
+### 🔹 2. Reading a File
+
+```python
+file = open("example.txt", "r")
+content = file.read()
+print(content)
+file.close()
+```
+
+**Other options:**
+
+```python
+file.readline()  # Reads one line
+file.readlines()  # Reads all lines as list
+```
+
+---
+
+### 🔹 3. Writing to a File
+
+```python
+file = open("example.txt", "w")  # Overwrites if exists
+file.write("Hello, Python!")
+file.close()
+```
+
+---
+
+### 🔹 4. Appending to a File
+
+```python
+file = open("example.txt", "a")
+file.write("\nThis is an extra line.")
+file.close()
+```
+
+---
+
+### 🔹 5. Using `with` Statement (Recommended)
+
+Automatically closes the file.
+
+```python
+with open("example.txt", "r") as file:
+    content = file.read()
+    print(content)
+```
+
+---
+
+### 🔹 6. File Handling with Exception Handling
+
+```python
+try:
+    with open("example.txt", "r") as f:
+        print(f.read())
+except FileNotFoundError:
+    print("File not found!")
+```
+
+---
+
+### 🔹 7. Deleting a File
+
+You can delete files using the `os` module:
+
+```python
+import os
+
+if os.path.exists("example.txt"):
+    os.remove("example.txt")
+else:
+    print("File does not exist")
+```
+
+---
+
+### 📌 Summary:
+
+| Operation | Function               |
+| --------- | ---------------------- |
+| Open      | `open()`               |
+| Read      | `read()`, `readline()` |
+| Write     | `write()`              |
+| Close     | `close()`              |
+| Delete    | `os.remove()`          |
+
+---
+

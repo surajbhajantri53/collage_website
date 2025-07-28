@@ -1,0 +1,115 @@
+**Basic Concepts of Object-Oriented Programming (OOP) in Python**
+
+---
+## **1. Introduction to OOP**
+Object-Oriented Programming (OOP) is a programming paradigm that organizes code into objects containing both data (attributes) and behaviors (methods). Python supports OOP, making code more modular, reusable, and efficient.
+
+---
+## **2. Core Concepts of OOP**
+### **1. Class and Object**
+- A **class** is a blueprint for creating objects.
+- An **object** is an instance of a class with specific values for its attributes.
+
+#### **Example:**
+```python
+class Car:
+    def __init__(self, brand, model):
+        self.brand = brand  # Attribute
+        self.model = model  # Attribute
+
+    def display_info(self):  # Method
+        print(f"Car: {self.brand} {self.model}")
+
+# Creating an object
+car1 = Car("Toyota", "Camry")
+car1.display_info()  # Output: Car: Toyota Camry
+```
+
+### **2. Encapsulation**
+- Restricts direct access to some of an object's components.
+- Achieved using **private** and **public** access specifiers.
+
+#### **Example:**
+```python
+class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance  # Private attribute
+    
+    def deposit(self, amount):
+        self.__balance += amount
+        print(f"New Balance: {self.__balance}")
+
+account = BankAccount(1000)
+account.deposit(500)  # Works fine
+print(account.__balance)  # Error: Attribute is private
+```
+
+### **3. Inheritance**
+- Allows a class to **inherit** attributes and methods from another class.
+- Promotes code reusability.
+
+#### **Example:**
+```python
+class Animal:
+    def speak(self):
+        print("This animal makes a sound")
+
+class Dog(Animal):
+    def speak(self):
+        print("Bark!")
+
+d = Dog()
+d.speak()  # Output: Bark!
+```
+
+### **4. Polymorphism**
+- Allows methods in different classes to have the same name but different implementations.
+
+#### **Example:**
+```python
+class Bird:
+    def sound(self):
+        print("Chirp Chirp")
+
+class Cat:
+    def sound(self):
+        print("Meow")
+
+# Polymorphism in action
+for animal in (Bird(), Cat()):
+    animal.sound()
+```
+
+### **5. Abstraction**
+- Hides implementation details from the user.
+- Achieved using **abstract classes** in Python’s `abc` module.
+
+#### **Example:**
+```python
+from abc import ABC, abstractmethod
+
+class Vehicle(ABC):
+    @abstractmethod
+    def start(self):
+        pass
+
+class Car(Vehicle):
+    def start(self):
+        print("Car is starting")
+
+c = Car()
+c.start()  # Output: Car is starting
+```
+
+---
+## **3. Summary**
+| Concept        | Description |
+|---------------|-------------|
+| **Class & Object** | Blueprint for creating objects & instances of classes. |
+| **Encapsulation** | Hiding data to protect integrity. |
+| **Inheritance** | A class can derive properties from another class. |
+| **Polymorphism** | Same method, different implementations. |
+| **Abstraction** | Hiding implementation details, showing only necessary features. |
+
+This guide covers **Basic Concepts of OOP in Python** with examples. Let me know if you need modifications or the next topic! 🚀
+

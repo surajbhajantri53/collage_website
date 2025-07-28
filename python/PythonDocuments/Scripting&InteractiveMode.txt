@@ -1,0 +1,97 @@
+**Scripting Mode and Interactive Mode in Python**
+
+Python provides two primary ways to execute code: **Interactive Mode** and **Scripting Mode**. Understanding both is essential for efficient coding and debugging.
+
+---
+## **1. Interactive Mode**
+
+### **What is Interactive Mode?**
+Interactive Mode (also known as the Python REPL - Read-Eval-Print Loop) allows users to execute Python commands one at a time and see immediate results. It is useful for testing small code snippets and debugging.
+
+### **How to Use Interactive Mode?**
+To open the interactive mode, simply open the terminal or command prompt and type:
+```sh
+python
+```
+Or, for Python 3:
+```sh
+python3
+```
+
+### **Example in Interactive Mode:**
+```python
+>>> print("Hello, World!")
+Hello, World!
+>>> 5 + 3
+8
+>>> x = 10
+>>> x * 2
+20
+```
+
+### **Advantages of Interactive Mode:**
+✅ **Instant feedback** – Results appear immediately.  
+✅ **Easy debugging** – Test small code snippets quickly.  
+✅ **No need for a script file** – Execute commands directly.  
+
+### **Disadvantages of Interactive Mode:**
+❌ **Not suitable for large programs** – You cannot save and run an entire project.  
+❌ **Cannot reuse code easily** – Commands are lost after closing the session.  
+
+---
+## **2. Scripting Mode**
+
+### **What is Scripting Mode?**
+Scripting Mode is used to write Python programs in a file with a **.py** extension and execute them as a script. This mode is ideal for writing reusable and large-scale programs.
+
+### **How to Use Scripting Mode?**
+1. Open a text editor (e.g., Notepad, VS Code, PyCharm).
+2. Write your Python code and save the file with a **.py** extension (e.g., `script.py`).
+3. Open the terminal or command prompt and navigate to the file location.
+4. Run the script using:
+```sh
+python script.py
+```
+Or for Python 3:
+```sh
+python3 script.py
+```
+
+### **Example in Scripting Mode (script.py):**
+```python
+# This is a simple Python script
+name = "Alice"
+print("Hello, " + name + "!")
+```
+#### **Output when executed:**
+```
+Hello, Alice!
+```
+
+### **Advantages of Scripting Mode:**
+✅ **Best for large programs** – Ideal for writing full-fledged applications.  
+✅ **Code reusability** – Scripts can be saved and reused.  
+✅ **Can include complex logic** – Supports loops, functions, and file handling.  
+
+### **Disadvantages of Scripting Mode:**
+❌ **No immediate feedback** – Unlike interactive mode, you must run the script to see results.  
+❌ **Requires a text editor** – You must write and save code in a file before execution.  
+
+---
+## **3. Key Differences Between Interactive and Scripting Mode**
+
+| Feature               | Interactive Mode | Scripting Mode |
+|----------------------|----------------|---------------|
+| **Execution Type**   | Line-by-line execution | Full script execution |
+| **Usage**            | Small code snippets | Large programs |
+| **Persistence**      | Commands lost after closing session | Code is saved in a file |
+| **Best For**         | Testing & debugging | Full-scale development |
+| **Ease of Use**      | Simple & quick | Requires saving and running a file |
+
+---
+## **4. When to Use Which Mode?**
+- **Use Interactive Mode** when testing small pieces of code, learning Python, or debugging simple commands.
+- **Use Scripting Mode** when building applications, working on projects, or writing complex logic.
+
+This guide covers the fundamentals of **Interactive Mode and Scripting Mode** in Python. Let me know if you need further clarifications or the next topic! 🚀
+

@@ -1,0 +1,131 @@
+**Global vs Local Variables, Modules, and Packages in Python**
+
+---
+## **1. Global vs Local Variables**
+### **What is a Variable?**
+A variable in Python is a container for storing data values. Variables have scope, which determines where they can be accessed within a program.
+
+### **Local Variables**
+- A variable declared inside a function is called a **local variable**.
+- It is accessible only within the function where it is defined.
+- It cannot be used outside that function.
+
+#### **Example:**
+```python
+def my_function():
+    x = 10  # Local variable
+    print("Inside function:", x)
+
+my_function()
+print(x)  # This will cause an error because x is local
+```
+
+### **Global Variables**
+- A **global variable** is declared outside any function.
+- It can be accessed inside and outside functions.
+
+#### **Example:**
+```python
+y = 20  # Global variable
+
+def my_function():
+    print("Inside function:", y)
+
+my_function()
+print("Outside function:", y)
+```
+
+### **Modifying Global Variables Inside a Function**
+- If we modify a global variable inside a function, we need to use the `global` keyword.
+
+#### **Example:**
+```python
+y = 50
+
+def modify_global():
+    global y
+    y = 100  # Modifies the global variable
+    print("Inside function:", y)
+
+modify_global()
+print("Outside function:", y)
+```
+
+---
+## **2. Modules in Python**
+### **What is a Module?**
+A **module** in Python is a file containing Python code (functions, classes, or variables) that can be reused in other programs.
+
+### **Creating and Importing a Module**
+A module is simply a Python file with a `.py` extension.
+
+#### **Example of Creating a Module (`mymodule.py`):**
+```python
+def greet(name):
+    return f"Hello, {name}!"
+```
+
+#### **Importing and Using the Module:**
+```python
+import mymodule
+print(mymodule.greet("Alice"))
+```
+
+### **Different Ways to Import a Module**
+1. **Import the entire module:**
+   ```python
+   import math
+   print(math.sqrt(16))  # Output: 4.0
+   ```
+2. **Import specific functions:**
+   ```python
+   from math import sqrt
+   print(sqrt(25))  # Output: 5.0
+   ```
+3. **Import with an alias:**
+   ```python
+   import math as m
+   print(m.pi)  # Output: 3.141592653589793
+   ```
+
+---
+## **3. Packages in Python**
+### **What is a Package?**
+A package is a collection of Python modules stored in a directory that contains a special `__init__.py` file.
+
+### **Creating a Package**
+1. Create a folder called `mypackage`.
+2. Inside it, create an empty `__init__.py` file (to make it a package).
+3. Add modules inside this package.
+
+#### **Example Directory Structure:**
+```
+mypackage/
+    __init__.py
+    module1.py
+    module2.py
+```
+
+#### **Example of `module1.py` inside `mypackage`:**
+```python
+def add(a, b):
+    return a + b
+```
+
+#### **Using the Package in a Python Script:**
+```python
+from mypackage import module1
+print(module1.add(3, 4))  # Output: 7
+```
+
+---
+## **4. Summary**
+| Concept | Description |
+|---------|-------------|
+| **Local Variable** | Declared inside a function; accessible only within that function. |
+| **Global Variable** | Declared outside a function; accessible throughout the program. |
+| **Module** | A Python file (`.py`) containing reusable code. |
+| **Package** | A collection of modules organized in directories. |
+
+This guide covers **Global vs. Local Variables, Modules, and Packages** in Python. Let me know if you need modifications or the next topic! 🚀
+

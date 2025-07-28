@@ -1,0 +1,83 @@
+
+---
+
+## 🛡️ Access Specifiers in Java
+
+Access specifiers (or access modifiers) **control the visibility** of classes, methods, and variables.
+
+| Access Specifier       | Where it can be accessed from               | Keyword              | Example                        |
+| ---------------------- | ------------------------------------------- | -------------------- | ------------------------------ |
+| `public`               | Anywhere (any class in any package)         | ✅ Most accessible    | `public int age;`              |
+| `protected`            | Same package + subclasses in other packages | 👪 Inheritance level | `protected String name;`       |
+| `default` (no keyword) | Only within the **same package**            | (none)               | `int marks;` (no keyword used) |
+| `private`              | Only within the **same class**              | 🔒 Most restricted   | `private double salary;`       |
+
+### 🎯 Example:
+
+```java
+public class Student {
+    public String name;
+    private int age;
+
+    public void display() {
+        System.out.println(name); // Allowed
+        System.out.println(age);  // Allowed
+    }
+}
+```
+
+---
+
+## ⚙️ Static Concept in Java
+
+### ❓ What does `static` mean?
+
+When something is declared as **static**, it **belongs to the class, not to any object**.
+
+### 🧠 Use Cases:
+
+* `static` **variables** → shared by all objects
+* `static` **methods** → can be called without creating an object
+* `static` **blocks** → runs only once when the class is loaded
+
+---
+
+### ✅ Example:
+
+```java
+class Counter {
+    static int count = 0;
+
+    Counter() {
+        count++;  // Increment static variable
+        System.out.println(count);
+    }
+
+    static void show() {
+        System.out.println("This is a static method.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        new Counter(); // prints 1
+        new Counter(); // prints 2
+        new Counter(); // prints 3
+
+        Counter.show(); // calling static method
+    }
+}
+```
+
+---
+
+### 💡 Summary:
+
+| Feature      | Static                  | Non-static                    |
+| ------------ | ----------------------- | ----------------------------- |
+| Belongs to   | Class                   | Object                        |
+| Call via     | `ClassName.method()`    | `object.method()`             |
+| Memory usage | Once per class          | Each object gets its own copy |
+| When used    | For shared data/methods | For unique data per object    |
+
+

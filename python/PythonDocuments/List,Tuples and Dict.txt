@@ -1,0 +1,120 @@
+Here are the details of **Operators, Data Types, Lists, Tuples, and Dictionary** in Python with code examples:  
+
+---
+
+## **1. Operators in Python**
+Operators are symbols used to perform operations on variables and values.
+
+### **Types of Operators:**
+#### **(a) Arithmetic Operators**
+```python
+a = 10
+b = 5
+print(a + b)  # Addition
+print(a - b)  # Subtraction
+print(a * b)  # Multiplication
+print(a / b)  # Division
+print(a % b)  # Modulus (Remainder)
+print(a ** b) # Exponentiation (Power)
+print(a // b) # Floor Division
+```
+
+#### **(b) Comparison Operators**
+```python
+x = 10
+y = 20
+print(x == y)  # False (Equal)
+print(x != y)  # True (Not Equal)
+print(x > y)   # False
+print(x < y)   # True
+print(x >= y)  # False
+print(x <= y)  # True
+```
+
+#### **(c) Logical Operators**
+```python
+a = True
+b = False
+print(a and b)  # False
+print(a or b)   # True
+print(not a)    # False
+```
+
+---
+
+## **2. Data Types in Python**
+Python has several built-in data types.
+
+### **Example of Different Data Types:**
+```python
+x = 10       # Integer
+y = 10.5     # Float
+z = "Hello"  # String
+a = True     # Boolean
+b = None     # NoneType
+
+print(type(x))  # <class 'int'>
+print(type(y))  # <class 'float'>
+print(type(z))  # <class 'str'>
+print(type(a))  # <class 'bool'>
+print(type(b))  # <class 'NoneType'>
+```
+
+---
+
+## **3. Lists in Python**
+Lists are **ordered, mutable (changeable), and allow duplicate values**.
+
+### **Example:**
+```python
+my_list = [10, 20, 30, "Python", 50]
+print(my_list)       # [10, 20, 30, 'Python', 50]
+print(my_list[2])    # 30 (Accessing element at index 2)
+my_list.append(60)   # Adding an element
+print(my_list)       # [10, 20, 30, 'Python', 50, 60]
+my_list[2] = 40
+```
+
+---
+
+## **4. Tuples in Python**
+Tuples are **ordered, immutable (unchangeable), and allow duplicate values**.
+
+### **Example:**
+```python
+my_tuple = (1, 2, 3, "Python", 5)
+print(my_tuple)      # (1, 2, 3, 'Python', 5)
+print(my_tuple[1])   # 2 (Accessing element at index 1)
+# my_tuple[2] = 10   # ❌ This will give an error because tuples are immutable
+```
+
+---
+
+## **5. Dictionary in Python**
+Dictionaries are **unordered, mutable, and store data in key-value pairs**.
+
+### **Example:**
+```python
+my_dict = {
+    "name": "John",
+    "age": 25,
+    "city": "New York"
+}
+print(my_dict)              # {'name': 'John', 'age': 25, 'city': 'New York'}
+print(my_dict["name"])      # John (Accessing value using key)
+my_dict["age"] = 30         # Updating value
+print(my_dict)              # {'name': 'John', 'age': 30, 'city': 'New York'}
+```
+
+---
+
+### **Summary**
+| Concept       | Characteristics |
+|--------------|----------------|
+| **Operators** | Used for performing mathematical and logical operations. |
+| **Data Types** | Define the type of data (int, float, string, etc.). |
+| **Lists** | Ordered, mutable, allows duplicates. |
+| **Tuples** | Ordered, immutable, allows duplicates. |
+| **Dictionaries** | Unordered, mutable, key-value pairs. |
+
+Let me know if you need further explanations! 🚀
